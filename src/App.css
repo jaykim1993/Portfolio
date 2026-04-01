@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 스크롤바 커스텀 (선택 사항: 다크모드 포트폴리오에 어울림) */
+::-webkit-scrollbar {
+  width: 0px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* 기본 HTML 설정 */
+html {
+  scroll-behavior: smooth; /* 내부 링크 이동 시 부드럽게 스크롤 */
+  background-color: #272323;
+  color: #ffffff;
+}
+
+body {
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+}
+
+a {
+  text-decoration: none; /* 밑줄 제거 */
+  color: inherit;       /* 부모 요소의 글자색 상속 (파란색 방지) */
+  cursor: pointer;      /* 마우스 커서를 손가락 모양으로 고정 */
+  display: inline-block; /* 애니메이션(크기 변환 등)을 줄 때 유리함 */
+}
+a:hover {
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+li {
+  list-style: none;
+}
+ul, ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+button {
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;      /* 부모의 폰트 설정 상속 */
+  cursor: pointer;
+  outline: inherit;
+}
+[id] {
+  scroll-margin-top: 15rem !important; /* 다른 스타일보다 우선순위 높임 */
+}

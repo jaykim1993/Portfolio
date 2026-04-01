@@ -11,7 +11,7 @@ export default function Header({ isSkipped }) {
             animate={{ y: 0 }}
             // 🛠️ 이 부분이 핵심입니다!
             transition={{ 
-                delay: isSkipped ? 0.2 : 4.2, // 스킵 시 즉시, 아니면 인트로 끝난 후
+                delay: isSkipped ? 0.2 : 2.2, // 스킵 시 즉시, 아니면 인트로 끝난 후
                 duration: 1.2, 
                 ease: [0.16, 1, 0.3, 1] // CSS에서 쓰시던 큐빅 베지어값 적용
             }}

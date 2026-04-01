@@ -29,7 +29,7 @@ export default function IntroContainer({ children, onSkip }) {
   const fullText = `Portfolio_JAY_KIM_V1.0.0
   Initialize Service: SUCCESS..
   Ready to Connect via Port 8080..`;
-  const typingSpeed = 50;
+  const typingSpeed = 30;
 
   useEffect(() => {
     if (isSkipped) return; // 스킵 시 타이머 중단
@@ -75,7 +75,7 @@ export default function IntroContainer({ children, onSkip }) {
                 filter: "brightness(500%) blur(30px)",
                 opacity: [1, 1, 0]
               }}
-              transition={{ duration: 4, ease: "easeIn" }}
+              transition={{ duration: 2, ease: "easeIn" }}
               style={introContainerStyle}
             >
               {phase === 1 && (

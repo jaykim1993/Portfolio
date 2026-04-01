@@ -1,0 +1,70 @@
+/* Layout.css */
+
+/* motion.main에 해당하는 클래스 */
+.main_container {
+    padding-top: 5rem;
+    min-height: 100vh;
+    min-width: 30vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+/* 본문 너비 제한 컨테이너 */
+.content_wrapper {
+    width: 90%;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+/* 개별 섹션 스타일 (기존 sectionStyle) */
+/* .section_item {
+    margin-bottom: 1rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding-top: 4.7rem;
+    margin-top: -4.7rem;
+} */
+
+/* 푸터 컨테이너 */
+.footer_wrapper {
+    margin-top: auto;
+    width: 100%;
+}
+.section_container {
+    width: 100%;
+    /* min-height: 90vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    /* 🎨 디자인 포인트 */
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 2rem;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+
+    /* ⚓ 스크롤 위치 보정 (기존 section_item의 역할) */
+    /* 헤더 높이만큼 띄워주고 다시 당겨서 앵커 이동 시 헤더에 가려지지 않게 함 */
+    scroll-margin-top: 5rem; /* modern CSS: paddingTop/marginTop 노가다 대신 사용 가능 */
+    margin-bottom: 4rem; /* 섹션 간 간격 */
+}
+
+.section_container:hover {
+    border-color: rgba(0, 255, 65, 0.5);
+    box-shadow: 0 0 20px rgba(0, 255, 65, 0.1);
+}
+
+/* 제목 스타일도 여기에 둡니다 */
+.section_title {
+    font-family: 'VT323', monospace;
+    font-size: 3.5rem;
+    color: #00FF41;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+}

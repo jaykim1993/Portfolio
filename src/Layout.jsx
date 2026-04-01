@@ -7,42 +7,46 @@ import Footer from './components/Footer';
 import IntroContainer from './components/IntroContainer';
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import './Layout.css'; 
 
 export default function Layout() {
     const [isSkipped, setIsSkipped] = useState(false);
 
-    // 1. 전체 컨테이너 설정 (차례대로 등장)
+    // 1. 전체 컨테이너 설정
     const containerVariants = {
         hidden: { opacity: 0 },
         visible: {
             opacity: 1,
             transition: {
-                // 스킵했으면 0초, 아니면 원래대로 5.5초
-                delayChildren: isSkipped ? 0.3 : 4.5, 
-                staggerChildren: isSkipped ? 0.1 : 0.3, // 스킵 시 등장 속도도 빠르게
+                // 💡 기준점: 둘의 차이는 정확히 2.2초
+                delayChildren: isSkipped ? 0.8 : 3.0, 
+                staggerChildren: 0.12, 
             }
         }
     };
 
-    // 2. 🛠️ 각 섹션 설정 (압축 후 해제)
+    // 2. 각 섹션 설정
     const itemVariants = {
         hidden: {
             opacity: 0,
-            y: 50, // 이동 거리는 살짝 줄임
-            height: 150, // 💡 압축된 높이
-            overflow: "hidden" // 💡 내용이 넘치지 않게 숨김
+            y: 20, 
+            height: 40, 
+            overflow: "hidden" 
         },
         visible: {
             opacity: 1,
             y: 0,
-            height: "auto", // 💡 압축 해제 (원본 높이)
+            height: "90vh", 
             transition: {
-                duration: isSkipped ? 0.6 : 1, // 스킵 시 등장 애니메이션 단축
+                duration: 0.5,
                 ease: [0.16, 1, 0.3, 1],
+
                 height: {
-                    delay: isSkipped ? 0.8 : 5.2, // 스킵 시 높이 확장 딜레이 제거
-                    duration: isSkipped ? 0.5 : 1,
-                    ease: "easeInOut"
+                    // 💡 등장 후 대기 시간도 2.2초의 시차를 그대로 적용
+                    // 스킵 시 1.1초 뒤 확장 시작 -> 일반 시 3.3초 뒤 확장 시작
+                    delay: isSkipped ? 1.1 : 3.3, 
+                    duration: 2.5, // 묵직한 확장 속도는 동일하게 고정
+                    ease: [0.76, 0, 0.24, 1] 
                 }
             }
         }
@@ -57,47 +61,32 @@ export default function Layout() {
                 initial="hidden"
                 animate="visible"
                 key={isSkipped ? "skipped" : "normal"}
-                style={{
-                    paddingTop: '5rem',
-                    minHeight: '100vh',
-                    minWidth: '30vh',
-                    display: 'flex',
-                    flexDirection: 'column',
-                    alignItems: 'center',
-                    overflowX: 'hidden',
-                    width: '100%'
-                }}
+                className="main_container"
             >
-                {/* 본문 너비 제한 컨테이너 */}
-                <div style={{
-                    width: '90%',           
-                    maxWidth: '120rem',      
-                    margin: '0 auto',       
-                }}>
-
-                    {/* 각 섹션들: motion.section에 variants 적용 */}
-                    <motion.section id="intro" variants={itemVariants} style={sectionStyle}>
+                <div className="content_wrapper">
+                    {/* 각 섹션 반복 */}
+                    <motion.section id="intro" variants={itemVariants} className="section_container">
                         <Intro />
                     </motion.section>
-
-                    <motion.section  id="skills" variants={itemVariants} style={sectionStyle}>
+                    <motion.section id="skills" variants={itemVariants} className="section_container">
                         <Skills />
                     </motion.section>
-
-                    <motion.section id="projects" variants={itemVariants} style={sectionStyle}>
+                    <motion.section id="projects" variants={itemVariants} className="section_container">
                         <Projects />
                     </motion.section>
-                    
-                    <motion.section id="contact" variants={itemVariants} style={sectionStyle}>
+                    <motion.section id="contact" variants={itemVariants} className="section_container">
                         <Contact />
                     </motion.section>
                 </div>
 
-                {/* 푸터는 압축 애니메이션 제외하고 마지막에 배치 */}
+                {/* 푸터 역시 2.2초의 차이를 유지하며 등장 */}
                 <motion.div
                     variants={{ visible: { opacity: 1, y: 0 }, hidden: { opacity: 0, y: 30 } }}
-                    transition={{ delay: isSkipped ? 0.9 : 6.0, duration: 1 }} // 본문 다 펼쳐진 후 등장
-                    style={{ marginTop: 'auto', width: '100%' }}
+                    transition={{ 
+                        delay: isSkipped ? 2.3 : 4.5, // 6.5 - 4.3 = 2.2초 차이!
+                        duration: 1 
+                    }}
+                    className="footer_wrapper"
                 >
                     <Footer />
                 </motion.div>
@@ -105,11 +94,3 @@ export default function Layout() {
         </IntroContainer>
     );
 }
-
-// 가독성을 위한 간단한 스타일 객체
-const sectionStyle = {
-    marginBottom: '1rem', // 섹션 간 간격
-    borderBottom: '2px solid white', // 미세한 경계선 (생략 가능)
-    paddingTop: '5rem',
-    marginTop: '-5rem'
-};

@@ -1,4 +1,17 @@
-.footer {
-    height: 300px;
-    border: 2px solid white;
+/* Footer.css */
+
+.footer_bottom {
+    width: 100%;
+    height: 100%; /* 부모 footer_wrapper의 4rem을 가득 채움 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer_bottom p {
+    font-size: 0.85rem;
+    color: #666; /* 너무 튀지 않는 차분한 회색 */
+    letter-spacing: 0.05em;
+    font-weight: 400;
+    
 }

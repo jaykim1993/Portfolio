@@ -7,48 +7,63 @@
     align-items: center;
     padding: 0 4rem;
     z-index: 9999;
-    background-color: rgb(27, 27, 27);
+    background-color: rgb(7, 9, 12);
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    
+
     position: fixed;
     top: 0;
     left: 0;
 
-    animation:  
+    animation:
         borderGlow 3.5s ease-in-out infinite;
 }
 
 @keyframes borderGlow {
-    0%, 100% {
+
+    0%,
+    100% {
         border-bottom: 1px solid rgba(0, 255, 64, 0);
         box-shadow: 0 2px 6px rgba(0, 255, 64, 0);
     }
+
     50% {
-        border-bottom: 1px solid rgba(0, 255, 64, 0.534);
-        box-shadow: 0 2px 12px rgba(0, 255, 65, 0.5);
+        border-bottom: 1px solid rgba(0, 255, 64, 0.384);
+        box-shadow: 0 2px 12px rgba(0, 255, 64, 0.534);
     }
 }
+
 .h_left {
     display: flex;
     gap: 1rem;
     align-items: center;
+    width: 60rem;
     flex-shrink: 0;
 }
-.h_left_img_wrap{
+
+.h_left_img_wrap {
     background: #e7e7e7;
     border-radius: 10px;
     width: 2.5rem;
     height: 2.5rem;
-    box-shadow: 0 0px 6px #00FF41; 
+
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease;
 }
 
 .h_left_img {
     object-fit: contain;
+    display: block;
     width: 2.0rem;
+}
+
+.h_left_img_wrap:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0px 5px #61dafb;
 }
 
 .h_left_span {
@@ -56,7 +71,15 @@
     font-weight: 600;
     letter-spacing: -0.03em;
     color: #e7e7e7;
-    cursor: default;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+
+.h_left_span:hover {
+    /* transform: translateX(5px); */
+    color: #61dafb;
+
 }
 
 .h_right {
@@ -66,8 +89,8 @@
     flex-shrink: 0;
 }
 
-.h_right_span {
-    font-size: 0.85rem;
+.h_right_a {
+    font-size: 1rem;
     font-weight: 500;
     color: #999;
     cursor: pointer;
@@ -75,23 +98,23 @@
     transition: color 0.3s ease;
 }
 
-.h_right_span:hover {
-    color: #e7e7e7;
+.h_right_a:hover {
+    color: #61dafb;
 }
 
-.h_right_span::after {
+.h_right_a::after {
     content: '';
     position: absolute;
     bottom: -4px;
     left: 0;
     width: 0;
-    height: 1px;
-    background-color: #e7e7e7;
+    height: 1.5px;
+    background-color: #61dafb;
     border-radius: 5px;
     transition: width 0.3s ease;
 }
 
-.h_right_span:hover::after {
+.h_right_a:hover::after {
     width: 100%;
 }
 

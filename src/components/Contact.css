@@ -1,0 +1,205 @@
+/* Contact.css */
+
+.contact_inner {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+
+/* 2단 구성: 왼쪽(정보) 1 : 오른쪽(폼) 1.8 (폼이 좀 더 넓게) */
+.contact_main {
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1.8fr;
+    gap: 5rem;
+    align-items: flex-start;
+}
+
+/* [왼쪽] 정보 영역 */
+.contact_info {
+    display: flex;
+    flex-direction: column;
+    gap: 3.5rem;
+}
+
+
+.link_group {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact_link {
+    font-size: 1.1rem;
+    color: #e7e7e7;
+    transition: all 0.3s ease;
+    width: fit-content;
+    text-decoration: none;
+}
+
+.contact_link:hover {
+    color: #00FF41;
+    transform: translateX(10px);
+}
+
+/* [오른쪽] 폼 액션 영역 */
+.contact_action {
+    width: 100%;
+    padding-left: 3rem;
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    /* 왼쪽과 구분 짓는 선 */
+}
+
+.action_title {
+    font-size: 3.5rem;
+    line-height: 1;
+    font-weight: 900;
+    color: #ffffff;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.05em;
+}
+
+/* 폼 스타일 - 기존 스타일을 유지하며 정돈 */
+.contact_form {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input_row {
+    display: flex;
+    gap: 1rem;
+}
+
+.contact_form input,
+.contact_form textarea {
+    width: 100%;
+    padding: 1.2rem;
+    background: rgba(27, 27, 27, 0.5);
+    /* 약간의 투명도 추가 */
+    /* border: 1px solid #333; */
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+/* 포커스 시 매트릭스 글로우 효과 */
+.contact_form input:focus,
+.contact_form textarea:focus {
+    outline: none;
+    border-color: rgba(0, 255, 64, 0.5);
+    box-shadow: 0 0 10px rgba(0, 255, 64, 0.15);
+    background: #1b1b1b;
+}
+
+/* 전송 버튼 - 크기를 좀 더 키우고 폼에 맞게 조정 */
+.submit_btn {
+    align-self: flex-end;
+    /* 버튼을 오른쪽으로 정렬 */
+    margin-top: 1.5rem;
+    width: 180px;
+    /* 고정 너비 혹은 30% 정도가 적당 */
+    padding: 1rem;
+    background: #e7e7e7;
+    color: #1b1b1b;
+    font-size: 1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit_btn:hover {
+    background: #00ff40;
+    color: #000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 255, 64, 0.3);
+}
+
+.image_box {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    /* 고정 높이 */
+
+    overflow: hidden;
+}
+
+.img_static {
+    opacity: 1;
+    transform: translateY(3px);
+}
+
+.img_gif {
+    opacity: 0;
+
+}
+
+.img_static,
+.img_gif {
+    /* 💡 공통: 두 이미지 모두 부모 박스 상단에 딱 붙입니다. */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    /* 박스 크기만큼 꽉 채우되 */
+
+    object-fit: contain;
+    object-position: top;
+    /* ⬅️ 이 줄이 가장 중요합니다! */
+
+
+    filter: invert(100%) brightness(200%);
+}
+
+/* 호버 시 처리 */
+.image_box:hover .img_gif {
+    opacity: 1;
+}
+
+.image_box:hover .img_static {
+
+    opacity: 0;
+}
+
+
+/* 반응형 대응 */
+@media (max-width: 1024px) {
+    .contact_main {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+    }
+
+    .contact_action {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding-top: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .input_row {
+        flex-direction: column;
+    }
+
+    .submit_btn {
+        width: 100%;
+        /* 모바일은 꽉 차게 */
+    }
+
+    .action_title {
+        font-size: 2.5rem;
+    }
+}

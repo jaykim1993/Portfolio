@@ -1,0 +1,135 @@
+/* 1. 메인 레이아웃: 광활한 공간감 확보 */
+.intro_main {
+    display: flex;
+    gap: 8rem;
+    /* 사진과 텍스트 사이 넉넉한 간격 */
+    align-items: flex-start;
+    margin-top: 2rem;
+    padding: 4rem;
+}
+
+.intro_info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    /* 섹션(Identity, Education/Experience) 간 간격 */
+}
+
+.info_flex_container {
+    display: flex;
+    gap: 8rem;
+    /* 하단 학력과 경력 사이 간격 */
+}
+
+/* 2. 섹션 타이틀 및 헤더 */
+.section_h3 {
+    font-size: 1rem;
+    font-weight: 800;
+    color: #61dafb;
+    /* 포인트 컬러 */
+    letter-spacing: 3px;
+    margin-bottom: 1.8rem;
+    text-transform: uppercase;
+}
+
+.item_header {
+    display: flex;
+    align-items: center;
+    /* 텍스트 하단 정렬 */
+    gap: 12px;
+    margin-bottom: 0.6rem;
+
+}
+
+/* 3. 핵심 슬로건 (Identity Highlight) */
+.identity_highlight .main_slogan {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1.3;
+    margin-bottom: 1.2rem;
+    letter-spacing: -0.5px;
+}
+
+.identity_highlight .sub_slogan {
+    font-size: 1.3rem;
+    color: #61dafb;
+    font-style: italic;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+/* 4. 정보 아이템 스타일 (학력, 경력 공통) */
+.info_item {
+    margin-bottom: 2.5rem;
+    /* 아이템 간 넉넉한 수직 여백 */
+}
+
+.info_label {
+    display: inline-block;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.3px;
+    margin-right: 20px;
+    line-height: 1.2;
+}
+
+.location_tag {
+    /* 텍스트가 태그 정중앙에 오도록 설정 */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #61dafb;
+    background: rgba(97, 218, 251, 0.1);
+    padding: 4px 8px;
+    /* 위아래 패딩을 살짝 늘려 박스 균형 조정 */
+    border-radius: 4px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+}
+
+.info_desc {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+    padding-left: 2px;
+}
+
+/* 5. 프로필 이미지 박스 (박스 쉐도우 및 포인트 디자인) */
+.profile_image_box {
+    width: 320px;
+    height: 450px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+}
+
+.image_placeholder {
+    font-size: 1rem;
+    letter-spacing: 6px;
+    color: rgba(255, 255, 255, 0.15);
+    text-transform: uppercase;
+}
+
+/* 6. 반응형 대응 (필요시 사용) */
+@media (max-width: 1200px) {
+    .intro_main {
+        gap: 5rem;
+    }
+
+    .info_flex_container {
+        gap: 3rem;
+    }
+}

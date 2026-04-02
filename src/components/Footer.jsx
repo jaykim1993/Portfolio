@@ -1,11 +1,11 @@
-import './Footer.css'
+import './Footer.css';
 
 export default function Footer() {
-
-    return (
-    <footer className="footer">
-      <h1>풋터~</h1>
-    </footer>
-  )
-
+  return (
+    <>
+      <div className="footer_bottom">
+        <p>© 2026 Jay Kim. All rights reserved.</p>
+      </div>
+    </>
+  );
 }

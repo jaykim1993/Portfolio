@@ -8,7 +8,7 @@
 
 /* 스크롤바 커스텀 (선택 사항: 다크모드 포트폴리오에 어울림) */
 ::-webkit-scrollbar {
-  width: 0px;
+  width:6px;
 }
 ::-webkit-scrollbar-track {
   background: #0a0a0a;
@@ -38,10 +38,7 @@ a {
   cursor: pointer;      /* 마우스 커서를 손가락 모양으로 고정 */
   display: inline-block; /* 애니메이션(크기 변환 등)을 줄 때 유리함 */
 }
-a:hover {
-  opacity: 0.7;
-  transition: opacity 0.3s ease;
-}
+
 li {
   list-style: none;
 }
@@ -57,7 +54,4 @@ button {
   font: inherit;      /* 부모의 폰트 설정 상속 */
   cursor: pointer;
   outline: inherit;
-}
-[id] {
-  scroll-margin-top: 15rem !important; /* 다른 스타일보다 우선순위 높임 */
 }

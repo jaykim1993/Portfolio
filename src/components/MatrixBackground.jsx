@@ -21,7 +21,7 @@ const MatrixBackground = () => {
 
     // 사용할 글자들 (한자, 숫자, 알파벳 등)
     const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789$+-*/=%\"'#&_(),.;:?!\\|{}<>[]^~";
-    const fontSize = 15;
+    const fontSize = 20;
     const columns = canvas.width / fontSize; // 화면 너비에 따른 열 개수
 
     // 각 열의 현재 y 좌표를 저장하는 배열
@@ -36,7 +36,7 @@ const MatrixBackground = () => {
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // 3. 글자 색상 및 폰트 설정
-      ctx.fillStyle = "rgba(0, 255, 0, 0.75)"; // 매트릭스 그린
+      ctx.fillStyle = "rgba(0, 255, 0, 1)"; // 매트릭스 그린
       ctx.font = fontSize + "px VT323";
 
       for (let i = 0; i < drops.length; i++) {
@@ -51,7 +51,7 @@ const MatrixBackground = () => {
       }
     };
 
-    const interval = setInterval(draw, 33); // 초당 약 30프레임
+    const interval = setInterval(draw, 50); // 초당 약 30프레임
 
     // 창 크기 조절 대응
     const handleResize = () => {
@@ -80,7 +80,7 @@ const MatrixBackground = () => {
         position: 'fixed',
         top: 0,
         left: 0,
-        zIndex: -1, // 헤더나 본문 아래에 깔리도록 설정
+        zIndex: -2, // 헤더나 본문 아래에 깔리도록 설정
         width: '100vw',
         height: '100vh',
       }}

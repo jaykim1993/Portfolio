@@ -26,7 +26,7 @@ export default function IntroContainer({ children, onSkip }) {
   const [typedText, setTypedText] = useState("");
   const [isSkipped, setIsSkipped] = useState(false);
 
-  const fullText = `Portfolio_JAY_KIM_V1.0.0
+  const fullText = `Portfolio JAY KIM ver1.0.0
   Initialize Service: SUCCESS..
   Ready to Connect via Port 8080..`;
   const typingSpeed = 30;
@@ -50,7 +50,7 @@ export default function IntroContainer({ children, onSkip }) {
     if (phase === 1 && !isSkipped) {
       const timer = setTimeout(() => {
         setPhase(2);
-      }, 4000);
+      }, 3000);
       return () => clearTimeout(timer);
     }
   }, [phase, isSkipped]);
@@ -152,9 +152,9 @@ const skipButtonStyle = {
   right: '0',
   background: 'none',
   border: 'none',
-  color: 'rgba(0, 255, 65, 0.6)',
+  color: '#fff',
   fontFamily: "'VT323', monospace",
-  fontSize: '1.1rem',
+  fontSize: '1.3rem',
   cursor: 'pointer',
   textDecoration: 'underline',
   padding: '5px'

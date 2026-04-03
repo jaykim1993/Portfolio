@@ -59,8 +59,8 @@ export default function Skills() {
   return (
     <div className="section_inner">
       <div className="section_header">
-        <h1 className="section_title">SKILLS</h1>
-        <span className="section_subtitle">/ Root / Skills</span>
+        <h1 className="section_title">Tech Stack</h1>
+        <span className="section_subtitle">/ Root / Tech Stack</span>
       </div>
       <div className="pipeline_wrapper">
         <div className="flow_progress_bar"><div className="light_stream"></div></div>

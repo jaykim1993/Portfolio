@@ -25,7 +25,10 @@
     gap: 3.5rem;
 }
 
-
+.contct_group{
+    display: flex;
+    gap: 1rem;
+}
 .link_group {
     display: flex;
     flex-direction: column;
@@ -33,7 +36,7 @@
 }
 
 .contact_link {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: #e7e7e7;
     transition: all 0.3s ease;
     width: fit-content;
@@ -41,7 +44,7 @@
 }
 
 .contact_link:hover {
-    color: #00FF41;
+    color: #61dafb;
     transform: translateX(10px);
 }
 
@@ -115,14 +118,13 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .submit_btn:hover {
-    background: #00ff40;
+    background: #61dafb;
     color: #000;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(0, 255, 64, 0.3);
+    box-shadow: 0 0 10px rgba(0, 255, 64, 0.3);
 }
 
 .image_box {

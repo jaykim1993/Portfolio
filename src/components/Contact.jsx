@@ -41,14 +41,14 @@ export default function Contact() {
         <div className="contact_info">
           <div className="info_item">
             <h3 className="section_h3">CHANNEL</h3>
-            <div className="link_group">
+            <div className="contct_group">
               <div className="image_box">
                 <img src="icons8-letter.png" className="img_static" alt="email" />
                 <img src="icons8-letter.apng.png" className="img_gif" alt="email" />
               </div>
-              <p className="contact_word">jaykim6674@gmail.com</p>
-              <p className="contact_word">Phone +82 10-6674-6038</p>
+              <span className="contact_word">jaykim6674@gmail.com</span>
             </div>
+            <p className="contact_word">Phone +82 10-6674-6038</p>
           </div>
 
           <div className="info_item">

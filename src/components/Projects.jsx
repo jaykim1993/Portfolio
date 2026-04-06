@@ -135,25 +135,46 @@ export default function Projects() {
       gifUrl: "/gifs/p1.gif",
       links: { github: "#", live: "#" }
     },
+    // {
+    //   "id": 9,
+    //   "title": "Car Renting & Management System",
+    //   "tech": "React / Spring Boot / MySQL",
+    //   "period": "2025.12 - 2026.03",
+    //   "role": "Full-stack Developer",
+    //   "stack": ["React", "Axios", "Spring Boot", "MyBatis", "MySQL", "Cloudtype"],
+    //   "goal": "사용자 예약 시스템과 관리자 전용 대시보드를 포함한 통합 렌터카 서비스 개발",
+    //   "features": [
+    //     "사용자: 실시간 차량 검색, 필터링 및 예약 기능 구현",
+    //     "관리자: 대시보드를 통한 차량 재고 관리, 예약 현황 조회 및 데이터 시각화",
+    //     "Axios Interceptor를 활용한 전역 에러 핸들링 및 효율적인 API 통신 구조 설계",
+    //     "MyBatis 동적 쿼리를 적용하여 복잡한 조건의 차량 검색 성능 최적화",
+    //     "Cloudtype PaaS 환경을 통해 백엔드 및 데이터베이스 클라우드 배포 완료"
+    //   ],
+    //   "gifUrl": "/gifs/p2.gif",
+    //   "links": {
+    //     "github": "https://github.com/jaykim1993/charang2026",
+    //     "live": "https://port-0-charang2026-mma8g0s58d0aa22f.sel3.cloudtype.app/"
+    //   }
+    // }
     {
-      "id": 9,
-      "title": "Car Renting & Management System",
-      "tech": "React / Spring Boot / MySQL",
-      "period": "2025.12 - 2026.03",
-      "role": "Full-stack Developer",
-      "stack": ["React", "Axios", "Spring Boot", "MyBatis", "MySQL", "Cloudtype"],
-      "goal": "사용자 예약 시스템과 관리자 전용 대시보드를 포함한 통합 렌터카 서비스 개발",
-      "features": [
-        "사용자: 실시간 차량 검색, 필터링 및 예약 기능 구현",
-        "관리자: 대시보드를 통한 차량 재고 관리, 예약 현황 조회 및 데이터 시각화",
-        "Axios Interceptor를 활용한 전역 에러 핸들링 및 효율적인 API 통신 구조 설계",
-        "MyBatis 동적 쿼리를 적용하여 복잡한 조건의 차량 검색 성능 최적화",
-        "Cloudtype PaaS 환경을 통해 백엔드 및 데이터베이스 클라우드 배포 완료"
+      id: 9,
+      title: "Car Renting & Management System",
+      tech: "React / Spring Boot / MySQL",
+      period: "2025.12 - 2026.03",
+      role: "Full-stack Developer",
+      stack: ["React", "Axios", "Spring Boot", "MyBatis", "MySQL", "Cloudtype"],
+      goal: "An integrated rental service featuring a real-time user reservation system and an admin dashboard for data-driven management.",
+      features: [
+        "Implemented real-time vehicle search, multi-criteria filtering, and streamlined booking flows for end-users.",
+        "Developed an Admin Dashboard for inventory control, reservation tracking, and data visualization.",
+        "Optimized complex search performance by implementing MyBatis Dynamic SQL for multi-parameter database queries.",
+        "Designed a robust API architecture using Axios Interceptors for global error handling and request management.",
+        "Deployed the full-stack ecosystem (Backend & MySQL) using Cloudtype PaaS for stable live service operation."
       ],
-      "gifUrl": "/gifs/p2.gif",
-      "links": {
-        "github": "https://github.com/jaykim1993/charang2026",
-        "live": "https://port-0-charang2026-mma8g0s58d0aa22f.sel3.cloudtype.app/"
+      gifUrl: "/gifs/p2.gif",
+      links: {
+        github: "https://github.com/jaykim1993/charang2026",
+        live: "https://port-0-charang2026-mma8g0s58d0aa22f.sel3.cloudtype.app/"
       }
     }
   ];

@@ -162,7 +162,10 @@
     font-size: 1rem;
     line-height: 1.5;
 }
-
+.terminal_body li p {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+}
 .project_one_liner {
     color: #61dafb;
     font-size: 1.6rem;
@@ -170,8 +173,8 @@
 
 .prompt {
     color: #61dafb;
-    margin-left: 50px;
-    margin-right: 20px;
+    margin-left: 40px;
+    margin-right: 10px;
 }
 
 /* 하단 버튼 */

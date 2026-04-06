@@ -114,50 +114,90 @@
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
-.profile_img{
+
+.profile_img {
     width: 120%;
     height: 120%;
     /* 💡 핵심: 사진 비율을 유지하며 박스를 가득 채움 (찌그러짐 방지) */
-    object-fit: cover; 
+    object-fit: cover;
     /* 사진의 중심을 기준으로 맞춤 */
-    object-position: center; 
+    object-position: center;
     display: block;
 }
+
 .image_placeholder {
     font-size: 1rem;
     letter-spacing: 6px;
     color: rgba(255, 255, 255, 0.15);
     text-transform: uppercase;
 }
+.profile_info {
+    margin-top: 1.5rem;
+    /* text-align: center; */
+}
 
+.profile_name {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 0.3rem;
+    margin: 0;
+    /* 텍스트 글로우 효과 (매트릭스 느낌) */
+    text-shadow: 0 0 10px rgba(0, 255, 64, 0.5), 0 0 20px rgba(0, 255, 64, 0.3);
+    font-family: 'VT323', monospace; /* 터미널 폰트 활용 */
+}
+
+.profile_role {
+    font-size: 1rem;
+    color: #00FF41; /* 매트릭스 그린 */
+    opacity: 0.8;
+    margin-top: 0.5rem;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+}
 /* --- 모바일 대응 (갤럭시, 아이폰 공통) --- */
 @media screen and (max-width: 430px) {
+
     /* 1. 메인 레이아웃: 가로(row) -> 세로(column) 전환 */
     .intro_main {
         flex-direction: column;
-        align-items: center; /* 이미지 중앙 정렬 */
-        gap: 3rem;           /* 섹션 간 간격 축소 */
-        padding: 2rem 1.5rem; /* 패딩 최적화 */
+        align-items: center;
+        /* 이미지 중앙 정렬 */
+        gap: 3rem;
+        /* 섹션 간 간격 축소 */
+        padding: 2rem 1.5rem;
+        /* 패딩 최적화 */
         margin-top: 0;
     }
 
     /* 2. 프로필 이미지 크기 조정 */
     .profile_image_box {
-        width: 100%;       /* 모바일 폭에 맞춤 */
-        max-width: 280px;  /* 너무 커지지 않게 제한 */
-        height: 350px;     /* 높이 적정 수준으로 조절 */
+        width: 100%;
+        /* 모바일 폭에 맞춤 */
+        max-width: 280px;
+        /* 너무 커지지 않게 제한 */
+        height: 350px;
+        /* 높이 적정 수준으로 조절 */
     }
 
     /* 3. 텍스트 정보 영역 */
     .intro_info {
         width: 100%;
         gap: 2.5rem;
+        text-align: right;
     }
-
+    .profile_name {
+        font-size: 1.8rem;
+        letter-spacing: 0.2rem;
+    }
+    .profile_role {
+        font-size: 0.8rem;
+    }
     /* 슬로건 폰트 크기 최적화 (가독성) */
     .identity_highlight .main_slogan {
         font-size: 1.4rem;
-        word-break: keep-all; /* 단어 단위로 줄바꿈 */
+        word-break: keep-all;
+        /* 단어 단위로 줄바꿈 */
     }
 
     .identity_highlight .sub_slogan {
@@ -202,4 +242,3 @@
         font-size: 1.25rem;
     }
 }
-

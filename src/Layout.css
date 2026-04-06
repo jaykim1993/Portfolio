@@ -10,39 +10,46 @@
     align-items: center;
 }
 
-/* 본문 너비 제한 컨테이너 */
 .content_wrapper {
-    width: 70%;
-    max-width: 120rem;
+    width: 90%;          /* PC에서도 너무 좁지 않게 90%로 시작 */
+    max-width: 1200px;   /* rem 대신 px이 관리하기 편합니다 */
     margin: 0 auto;
 }
 
 .section_container {
     width: 100%;
-    min-height: 51rem;
-    min-width: 50rem;
+    /* ⚠️ 중요: 모바일 대응을 위해 아래 고정값들을 해제해야 합니다 */
+    min-height: auto;    /* 고정 높이 해제 */
+    min-width: 0;        /* 50rem 고정값 해제 (이게 화면 터지는 주원인) */
+    
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* center 대신 위에서부터 차곡차곡 */
     align-items: center;
-    /* 💡 핵심: 복잡한 패딩/마진 대신 이 두 줄만 사용 */
+    
     scroll-margin-top: 6rem;
-    /* 헤더 높이(4rem) + 여유공간(2rem) */
     position: relative;
-    /* border: 1px solid rgba(255, 255, 255, 0.1); */
     border-radius: 20px;
-    /* padding: 2rem; */
     background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(10px);
     margin-bottom: 3rem;
     transition: box-shadow 0.2s ease;
+    overflow: hidden;    /* 내부 요소가 삐져나가는 것 방지 */
 }
 
-.section_inner {
+/* .section_inner {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
+} */
+.section_inner {
+    width: 100%;
+    max-width: 100%;     /* 부모에 맞춤 */
+    margin: 0 auto;
+    padding: 3rem 2rem;  /* PC 여백 */
+    height: auto !important; 
+    min-height: auto !important;
 }
 
 /* 제목 스타일도 여기에 둡니다 */
@@ -97,41 +104,36 @@
 
 /* --- 반응형 레이아웃 추가 --- */
 
-/* 1. 갤럭시 (S20, S21, S22, S23, S24 등 - 보통 360px ~ 412px) */
-@media screen and (max-width: 412px) {
+@media screen and (max-width: 430px) {
     .content_wrapper {
-        width: 92%; /* 양옆 여백을 최소화하여 콘텐츠 확보 */
+        width: 95%;      /* 모바일은 거의 꽉 차게 */
+    }
+
+    .main_container {
+        padding-top: 4rem; /* 헤더 높이만큼만 */
     }
 
     .section_container {
-        min-width: 100%; /* 고정 min-width 해제 */
-        padding: 1.5rem; /* 내부 여백 추가 */
-        min-height: auto; /* 모바일에서는 내용만큼 늘어나도록 */
+        border-radius: 12px; /* 모바일은 조금 더 날카롭게 */
+        margin-bottom: 1.5rem;
+        padding: 0;      /* 내부 여백은 inner에서 조절 */
+    }
+
+    .section_inner {
+        padding: 2rem 1rem; /* 모바일 전용 좁은 패딩 */
     }
 
     .section_title {
-        font-size: 2rem; /* 폰트 크기 조절 */
+        font-size: 1.8rem;
         letter-spacing: 0.1rem;
     }
 
-    .section_h3 {
-        font-size: 0.75rem;
-    }
-}
-
-/* 2. 아이폰 기본 (iPhone 13, 14, 15, 16 - 보통 390px ~ 393px) */
-/* 갤럭시와 유사하지만, 노치/다이내믹 아일랜드 및 하단 바를 고려한 세부 조정 */
-@media screen and (max-width: 393px) {
-    .main_container {
-        padding-top: 4.5rem; /* 모바일 헤더 높이에 맞게 조절 */
-    }
-
-    .section_header {
-        padding-left: 1rem;
+    .section_subtitle {
+        font-size: 0.9rem;
     }
 
     .footer_wrapper {
-        height: 6rem; /* 푸터 높이 축소 */
-        padding-bottom: env(safe-area-inset-bottom); /* 아이폰 하단 홈바 영역 대응 */
+        height: 5rem;
+        padding-bottom: env(safe-area-inset-bottom);
     }
 }

@@ -86,30 +86,30 @@ export default function IntroContainer({ children, onSkip }) {
               )}
 
               <motion.div
-        animate={phase === 1 ? { scale: 1.02, borderColor: "#00FF41", boxShadow: '0 0 20px rgba(0, 255, 65, 0.2)' } : {}}
-        style={typingBoxStyle}
-      >
-        {/* 📟 터미널 상단 바 추가 */}
-        <div style={terminalHeaderStyle}>
-          <div style={dotContainerStyle}>
-            <span style={{...dotStyle, backgroundColor: '#FF5F56'}}></span>
-            <span style={{...dotStyle, backgroundColor: '#FFBD2E'}}></span>
-            <span style={{...dotStyle, backgroundColor: '#27C93F'}}></span>
-          </div>
-          <div style={terminalTitleStyle}>bash — jaykim — 80x24</div>
-        </div>
+                animate={phase === 1 ? { scale: 1.02, borderColor: "#00FF41", boxShadow: '0 0 20px rgba(0, 255, 65, 0.2)' } : {}}
+                style={typingBoxStyle}
+              >
+                {/* 📟 터미널 상단 바 추가 */}
+                <div style={terminalHeaderStyle}>
+                  <div style={dotContainerStyle}>
+                    <span style={{ ...dotStyle, backgroundColor: '#FF5F56' }}></span>
+                    <span style={{ ...dotStyle, backgroundColor: '#FFBD2E' }}></span>
+                    <span style={{ ...dotStyle, backgroundColor: '#27C93F' }}></span>
+                  </div>
+                  <div style={terminalTitleStyle}>bash — jaykim — 80x24</div>
+                </div>
 
-        {/* 💻 터미널 내부 콘텐츠 */}
-        <div style={terminalContentStyle}>
-          <span style={{ color: '#00FF41', marginRight: '10px' }}>$</span>
-          {typedText}
-          <Cursor phase={phase} />
-        </div>
+                {/* 💻 터미널 내부 콘텐츠 */}
+                <div style={terminalContentStyle}>
+                  <span style={{ color: '#00FF41', marginRight: '10px' }}>$</span>
+                  {typedText}
+                  <Cursor phase={phase} />
+                </div>
 
-        <button onClick={handleSkip} style={skipButtonStyle}>
-          SKIP_TERMINAL {`>>`}
-        </button>
-      </motion.div>
+                <button onClick={handleSkip} style={skipButtonStyle}>
+                  SKIP_TERMINAL {`>>`}
+                </button>
+              </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -147,10 +147,12 @@ const typingBoxStyle = {
   zIndex: 1,
   color: '#fff',
   fontFamily: "'VT323', monospace",
-  fontSize: '1.8rem', // 가독성을 위해 살짝 조절
+  fontSize: 'clamp(1rem, 4vw, 1.8rem)', // 브라우저 크기에 따라 폰트 자동 조절
   backgroundColor: 'rgba(10, 10, 10, 0.85)', // 더 깊은 블랙
-  width: '45rem', // 터미널 비율에 맞게 살짝 넓힘
-  height: '16rem', // 헤더 공간 확보를 위해 높임
+  width: '90%', // 모바일 대응
+  maxWidth: '45rem', // PC 최대폭
+  height: 'auto',
+  minHeight: '16rem',
   border: '1px solid rgba(255, 255, 255, 0.2)',
   borderRadius: '10px', // 부드러운 모서리
   display: 'flex',

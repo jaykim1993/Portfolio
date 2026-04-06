@@ -120,6 +120,7 @@
 /* --- 기존 코드 하단에 추가 --- */
 
 @media (max-width: 430px) {
+
     /* 1. 헤더 전체 여백 조정 */
     .header {
         height: 3.5rem;
@@ -129,16 +130,19 @@
     /* 2. 왼쪽 로고: 이름 줄이기 (Jay Kim만 남기거나 폰트 축소) */
     .h_left_span {
         font-size: 0.7rem;
-        white-space: nowrap; /* 줄바꿈 방지 */
+        white-space: nowrap;
+        /* 줄바꿈 방지 */
     }
 
     /* 3. 오른쪽 메뉴: 간격과 폰트 최적화 */
     .h_right {
-        gap: 0.7rem; /* 링크 사이 간격을 좁게 */
+        gap: 0.7rem;
+        /* 링크 사이 간격을 좁게 */
     }
 
     .h_right_a {
-        font-size: 0.75rem; /* 가독성을 해치지 않는 선에서 최소화 */
+        font-size: 0.75rem;
+        /* 가독성을 해치지 않는 선에서 최소화 */
         font-weight: 700;
     }
 
@@ -155,12 +159,14 @@
 /* 초소형 기기 (iPhone SE3 등 375px 이하) 대응 */
 @media (max-width: 380px) {
     .h_left_span {
-        display: none; /* 화면이 너무 좁으면 아이콘만 노출 */
+        display: none;
+        /* 화면이 너무 좁으면 아이콘만 노출 */
     }
-    
+
     .h_right {
         gap: 0.8rem;
         width: 100%;
-        justify-content: space-around; /* 메뉴를 화면에 골고루 분산 */
+        justify-content: space-around;
+        /* 메뉴를 화면에 골고루 분산 */
     }
 }

@@ -8,50 +8,89 @@
 
 /* 스크롤바 커스텀 (선택 사항: 다크모드 포트폴리오에 어울림) */
 ::-webkit-scrollbar {
-  width:6px;
+  width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: #0a0a0a;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #333;
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
 
 /* 기본 HTML 설정 */
 html {
-  scroll-behavior: smooth; /* 내부 링크 이동 시 부드럽게 스크롤 */
+  scroll-behavior: smooth;
+  /* 내부 링크 이동 시 부드럽게 스크롤 */
   background-color: #272323;
   color: #ffffff;
 }
 
 body {
-  overflow-x: hidden; /* 가로 스크롤 방지 */
+  overflow-x: hidden;
+  /* 가로 스크롤 방지 */
 }
 
 a {
-  text-decoration: none; /* 밑줄 제거 */
-  color: inherit;       /* 부모 요소의 글자색 상속 (파란색 방지) */
-  cursor: pointer;      /* 마우스 커서를 손가락 모양으로 고정 */
-  display: inline-block; /* 애니메이션(크기 변환 등)을 줄 때 유리함 */
+  text-decoration: none;
+  /* 밑줄 제거 */
+  color: inherit;
+  /* 부모 요소의 글자색 상속 (파란색 방지) */
+  cursor: pointer;
+  /* 마우스 커서를 손가락 모양으로 고정 */
+  display: inline-block;
+  /* 애니메이션(크기 변환 등)을 줄 때 유리함 */
 }
 
 li {
   list-style: none;
 }
-ul, ol {
+
+ul,
+ol {
   list-style: none;
   padding: 0;
   margin: 0;
 }
+
 button {
   background: none;
   border: none;
   padding: 0;
-  font: inherit;      /* 부모의 폰트 설정 상속 */
+  font: inherit;
+  /* 부모의 폰트 설정 상속 */
   cursor: pointer;
   outline: inherit;
+}
+
+
+/* 전역 설정 */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
+  /* 가로 스크롤 절대 방지 */
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+/* 메인 컨테이너 (App.js에서 전체를 감싸는 div) */
+.App {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }

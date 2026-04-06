@@ -2,21 +2,21 @@
 .projects_grid {
     display: grid;
     /* 💡 기존 그리드 설정 유지 */
-    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    /* grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); */
     gap: 1.7rem;
     padding: 2rem;
     margin-top: 1rem;
     width: 100%;
     /* 💡 핵심: 부모(.section_inner) 높이에서 상단 요소들의 높이를 뺀 만큼만 차지 */
     /* 100%는 부모의 전체 높이입니다. 제목이나 여백만큼 빼주면 딱 맞습니다. */
-    height: 700px;
-    
+    height: auto !important;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     /* 💡 스크롤 활성화 */
     overflow-y: auto;
     overflow-x: hidden;
 
     /* 💡 박스 내부 레이아웃이 깨지지 않게 설정 */
-    align-content: start; 
+    align-content: start;
 
     /* 스크롤바 커스텀 (섹션 스크롤바와 통일감) */
     scrollbar-width: thin;
@@ -27,10 +27,12 @@
 .projects_grid::-webkit-scrollbar {
     width: 5px;
 }
+
 .projects_grid::-webkit-scrollbar-thumb {
     background: rgba(0, 255, 65, 0.2);
     border-radius: 10px;
 }
+
 .projects_grid::-webkit-scrollbar-thumb:hover {
     background: rgba(0, 255, 65, 0.5);
 }
@@ -160,6 +162,7 @@
     font-size: 1rem;
     line-height: 1.5;
 }
+
 .project_one_liner {
     color: #61dafb;
     font-size: 1.6rem;
@@ -179,9 +182,11 @@
     margin: 2rem;
     gap: 3rem;
 }
-.external_links{
+
+.external_links {
     flex: 1;
 }
+
 .link_icon_btn {
     text-decoration: none;
     color: #fff;
@@ -212,30 +217,43 @@
 /* 모달/GIF 스타일 */
 .gif_modal_overlay {
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: rgba(0,0,0,0.9);
-    display: flex; align-items: center; justify-content: center;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 10000;
 }
 
 .gif_modal_content {
     background: #000;
     border: 1px solid #57ff81;
-    width: 80%; max-width: 800px;
+    width: 80%;
+    max-width: 800px;
 }
 
 .modal_header {
     background: #111;
     padding: 8px 15px;
-    display: flex; justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
     border-bottom: 1px solid #222;
 }
 
-.modal_title { color: #57ff81; font-size: 0.8rem; }
+.modal_title {
+    color: #57ff81;
+    font-size: 0.8rem;
+}
 
 .close_modal {
-    background: transparent; border: none; color: #fff;
-    font-size: 1.2rem; cursor: pointer;
+    background: transparent;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .gif_container img {
@@ -246,11 +264,14 @@
 
 /* --- Projects 반응형 대응 --- */
 @media screen and (max-width: 430px) {
+
     /* 1. 프로젝트 리스트 그리드 조정 */
     .projects_grid {
-        grid-template-columns: 1fr; /* 무조건 한 줄에 하나씩 */
+        grid-template-columns: 1fr;
+        /* 무조건 한 줄에 하나씩 */
         padding: 1rem;
-        height: 500px; /* 모바일 화면 높이에 맞춰 조정 */
+        height: 500px;
+        /* 모바일 화면 높이에 맞춰 조정 */
         gap: 1.2rem;
     }
 
@@ -284,7 +305,8 @@
 
     .terminal_body {
         padding: 1rem;
-        height: auto; /* 내용에 따라 늘어나도록 (모바일은 스크롤보다 펼침이 유리) */
+        height: auto;
+        /* 내용에 따라 늘어나도록 (모바일은 스크롤보다 펼침이 유리) */
         min-height: 15rem;
     }
 
@@ -294,7 +316,8 @@
     }
 
     .prompt {
-        margin-left: 5px; /* 프롬프트 간격 대폭 축소 */
+        margin-left: 10px;
+        /* 프롬프트 간격 대폭 축소 */
         margin-right: 8px;
     }
 
@@ -305,8 +328,10 @@
         gap: 1rem;
     }
 
-    .play_gif_btn, .back_action_btn {
-        flex: 1; /* 버튼 너비 균등 배분 */
+    .play_gif_btn,
+    .back_action_btn {
+        flex: 1;
+        /* 버튼 너비 균등 배분 */
         font-size: 0.8rem;
         padding: 10px 5px;
         text-align: center;
@@ -314,7 +339,8 @@
 
     /* 5. GIF 모달 최적화 */
     .gif_modal_content {
-        width: 95%; /* 화면에 꽉 차게 */
+        width: 95%;
+        /* 화면에 꽉 차게 */
     }
 
     .modal_title {
@@ -327,7 +353,7 @@
     .tag_mini {
         font-size: 0.75rem;
     }
-    
+
     .link_icon_btn {
         font-size: 0.75rem;
         margin-right: 0.8rem;

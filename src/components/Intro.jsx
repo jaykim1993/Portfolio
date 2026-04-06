@@ -5,14 +5,18 @@ export default function Intro() {
     <div className="section_inner">
       <div className="section_header">
         <h1 className="section_title">IDENTITY</h1>
-        <span className="section_subtitle">/ Root / Intro</span>
+        <span className="section_subtitle">/ Root / IDENTITY</span>
       </div>
 
       <div className="intro_main">
         <div className="intro_profile">
           <div className="profile_image_box">
-            <img className="profile_img" src='profile2.png'/>
-            {/* <div className="image_placeholder">PHOTO</div> */}
+            <img className="profile_img" src='profile2.png' alt="Jay Kim" />
+          </div>
+          {/* 이름 영역 추가 */}
+          <div className="profile_info">
+            <h1 className="profile_name">JAY KIM</h1>
+            <p className="profile_role">Full-stack Developer</p>
           </div>
         </div>
 

@@ -25,10 +25,11 @@
     gap: 3.5rem;
 }
 
-.contct_group{
+.contct_group {
     display: flex;
     gap: 1rem;
 }
+
 .link_group {
     display: flex;
     flex-direction: column;
@@ -175,71 +176,100 @@
     opacity: 0;
 }
 
-/* --- Contact 모바일 최종 최적화 (430px 이하) --- */
-@media (max-width: 430px) {
-    /* 1. 메인 패딩 축소 */
+/* --- Contact 모바일 통합 최적화 (갤럭시/아이폰 공통) --- */
+@media screen and (max-width: 430px) {
+
+    /* 1. 2단 그리드를 1단(상하)으로 전환 */
     .contact_main {
-        padding: 2rem 1rem; /* 좌우 여백을 줄여 입력창 공간 확보 */
-        gap: 3rem;
+        display: flex;
+        flex-direction: column;
+        /* 왼쪽 정보를 위로, 폼을 아래로 */
+        padding: 1.5rem 1rem;
+        gap: 2.5rem;
+        /* 섹션 간 간격 */
     }
 
-    /* 2. 왼쪽 정보 영역 */
+    /* 2. 왼쪽 정보 영역 (CHANNEL, SOCIAL) */
     .contact_info {
+        width: 100%;
         gap: 2rem;
+        align-items: flex-start;
+    }
+
+    .info_item {
+        width: 100%;
+    }
+
+    .contct_group {
+        flex-wrap: wrap;
+        /* 이메일이 길면 아래로 떨어지게 */
     }
 
     .contact_word {
-        font-size: 0.9rem; /* 이메일 주소가 길면 잘릴 수 있으므로 축소 */
-        word-break: break-all; /* 긴 이메일 주소 줄바꿈 허용 */
+        font-size: 0.95rem;
+        word-break: break-all;
     }
 
-    .contact_link {
-        font-size: 1.1rem;
-    }
-
-    /* 3. 오른쪽 폼 영역 */
+    /* 3. 오른쪽 폼 영역 (DIRECT CONTACT) - 밑으로 이동 */
     .contact_action {
-        padding-top: 2rem;
+        width: 100%;
+        padding-left: 0;
+        /* 기존 PC용 왼쪽 여백 제거 */
+        border-left: none;
+        /* 기존 PC용 구분선 제거 */
         border-top: 1px solid rgba(255, 255, 255, 0.1);
+        /* 상하 구분을 위한 상단 선 추가 */
+        padding-top: 2.5rem;
     }
 
+    /* 4. 폼 요소 최적화 */
     .contact_form {
-        padding: 0.5rem 0; /* 폼 내부 패딩 제거 */
+        padding: 1rem 0;
         gap: 0.8rem;
     }
 
-    /* 4. 입력창 레이아웃 (30%/70% 해제 및 세로 정렬) */
     .input_row {
         flex-direction: column;
+        /* Name과 Email을 한 줄씩 세로로 */
         gap: 0.8rem;
     }
 
-    /* JSX에서 인라인 스타일을 제거했을 경우 사용 */
-    .input_name, .input_email {
-        width: 100% !important; 
-    }
-
+    /* 5. 아이폰 자동 줌 방지 및 터치 최적화 */
     .contact_form input,
     .contact_form textarea {
+        width: 100% !important;
+        /* 인라인 스타일 무시 */
         padding: 1rem;
-        font-size: 16px; /* ⚠️ 중요: 아이폰에서 16px 미만은 자동 줌(Zoom)이 발생함 */
+        font-size: 16px;
+        /* iOS 자동 확대 방지 임계값 */
         border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        /* 모바일에서 가독성 향상 */
     }
 
-    /* 5. 전송 버튼 */
+    .contact_form textarea {
+        height: 200px;
+        /* 모바일에서 너무 길지 않게 조절 */
+    }
+
+    /* 6. 전송 버튼 */
     .submit_btn {
-        margin-top: 1rem;
-        padding: 1.2rem; /* 터치하기 쉽게 높이 확보 */
+        width: 100%;
+        /* 모바일은 꽉 차는 버튼이 누르기 편함 */
+        margin-top: 0.5rem;
+        padding: 1.1rem;
         font-size: 1.1rem;
+        border-radius: 8px;
     }
 }
 
-/* 초소형 기기 보정 */
-@media (max-width: 360px) {
+/* 아주 작은 기기 (iPhone SE 등) */
+@media screen and (max-width: 360px) {
     .section_title {
         font-size: 1.8rem;
     }
+
     .contact_word {
-        font-size: 0.8rem;
+        font-size: 0.85rem;
     }
 }

@@ -228,19 +228,66 @@
   }
 }
 
-/* 7. 반응형 미디어 쿼리 */
-@media (max-width: 1024px) {
-  .horizontal_flow_container {
-    flex-direction: column;
-    align-items: center;
-  }
+/* --- Skills 모바일 대응 --- */
+@media screen and (max-width: 430px) {
+    /* 1. 전체 파이프라인 컨테이너 */
+    .pipeline_wrapper {
+        padding: 1rem 0.5rem;
+    }
 
-  .flow_column_haptic {
-    width: 100%;
-    max-width: 450px;
-  }
+    /* 2. 가로 플로우 -> 2x2 그리드 레이아웃 */
+    .horizontal_flow_container {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2열 배치 */
+        gap: 1.5rem 1rem;              /* 행과 열 간격 */
+        width: 100%;
+    }
 
-  .flow_column_haptic::before {
-    display: none;
-  }
+    /* 3. 각 기둥(Frontend, Backend 등) 스타일 조정 */
+    .flow_column_haptic {
+        width: 100%;
+        min-width: unset; /* 기존 고정 너비 해제 */
+    }
+
+    .column_title_haptic {
+        font-size: 0.85rem; /* 타이틀 크기 축소 */
+        letter-spacing: 1px;
+    }
+
+    /* 4. 슬라이드 뷰포트 높이 조정 */
+    .vertical_slide_viewport {
+        height: 200px; /* 모바일에서 너무 길지 않게 제한 */
+    }
+
+    /* 5. 개별 스킬 아이템 */
+    .skill_item_haptic {
+        padding: 0.5rem;
+        gap: 0.4rem;
+    }
+
+    .haptic_icon_box {
+        font-size: 1.2rem; /* 아이콘 크기 살짝 축소 */
+    }
+
+    .haptic_name_text {
+        font-size: 0.75rem; /* 텍스트 크기 축소 */
+    }
+
+    .skill_type_badge {
+        font-size: 0.5rem; /* 배지 크기 축소 */
+        padding: 1px 4px;
+    }
+
+    /* 6. 흐르는 애니메이션 선 (선택 사항) */
+    /* 모바일에서 그리드로 바뀌면 선의 위치가 어색할 수 있으니 숨기거나 조정 */
+    .flow_progress_bar {
+        display: none; 
+    }
+}
+
+/* iPhone SE 등 아주 작은 기기 */
+@media screen and (max-width: 370px) {
+    .horizontal_flow_container {
+        grid-template-columns: 1fr; /* 1열로 세로 배치 */
+    }
 }

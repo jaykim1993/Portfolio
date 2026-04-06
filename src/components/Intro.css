@@ -130,13 +130,75 @@
     text-transform: uppercase;
 }
 
-/* 6. 반응형 대응 (필요시 사용) */
-@media (max-width: 1200px) {
+/* --- 모바일 대응 (갤럭시, 아이폰 공통) --- */
+@media screen and (max-width: 430px) {
+    /* 1. 메인 레이아웃: 가로(row) -> 세로(column) 전환 */
     .intro_main {
-        gap: 5rem;
+        flex-direction: column;
+        align-items: center; /* 이미지 중앙 정렬 */
+        gap: 3rem;           /* 섹션 간 간격 축소 */
+        padding: 2rem 1.5rem; /* 패딩 최적화 */
+        margin-top: 0;
     }
 
+    /* 2. 프로필 이미지 크기 조정 */
+    .profile_image_box {
+        width: 100%;       /* 모바일 폭에 맞춤 */
+        max-width: 280px;  /* 너무 커지지 않게 제한 */
+        height: 350px;     /* 높이 적정 수준으로 조절 */
+    }
+
+    /* 3. 텍스트 정보 영역 */
+    .intro_info {
+        width: 100%;
+        gap: 2.5rem;
+    }
+
+    /* 슬로건 폰트 크기 최적화 (가독성) */
+    .identity_highlight .main_slogan {
+        font-size: 1.4rem;
+        word-break: keep-all; /* 단어 단위로 줄바꿈 */
+    }
+
+    .identity_highlight .sub_slogan {
+        font-size: 1.1rem;
+    }
+
+    /* 4. 학력/경력 컨테이너: 가로 -> 세로 전환 */
     .info_flex_container {
-        gap: 3rem;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    /* 5. 세부 아이템 간격 조정 */
+    .section_h3 {
+        margin-bottom: 1.2rem;
+        font-size: 0.9rem;
+    }
+
+    .info_item {
+        margin-bottom: 1.8rem;
+    }
+
+    .info_label {
+        font-size: 1.1rem;
+    }
+
+    .info_desc {
+        font-size: 0.95rem;
+    }
+
+    /* 위치 태그가 너무 튀지 않게 조정 */
+    .location_tag {
+        margin-left: 6px;
+        font-size: 0.65rem;
+        padding: 2px 6px;
+    }
+}
+
+/* 아주 좁은 기기 (iPhone SE 등) 추가 보정 */
+@media screen and (max-width: 375px) {
+    .identity_highlight .main_slogan {
+        font-size: 1.25rem;
     }
 }

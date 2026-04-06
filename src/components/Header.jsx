@@ -11,8 +11,11 @@ export default function Header({ isSkipped }) {
         e.preventDefault();
         const target = document.getElementById(id);
         if (target) {
-            const headerHeight = 64; // 4rem = 64px
-            const extraMargin = 20;  // 약간의 여유 공간
+            // 모바일(window.innerWidth < 430)일 때는 헤더가 더 낮으므로 조건부 설정
+            const isMobile = window.innerWidth <= 430;
+            const headerHeight = isMobile ? 56 : 64; // 3.5rem vs 4rem
+            const extraMargin = isMobile ? 10 : 20;
+
             const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
 
             window.scrollTo({

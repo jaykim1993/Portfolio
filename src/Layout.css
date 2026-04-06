@@ -94,3 +94,44 @@
     z-index: 10;
     box-shadow: 0 -6px 20px rgba(0, 255, 64, 0.13);
 }
+
+/* --- 반응형 레이아웃 추가 --- */
+
+/* 1. 갤럭시 (S20, S21, S22, S23, S24 등 - 보통 360px ~ 412px) */
+@media screen and (max-width: 412px) {
+    .content_wrapper {
+        width: 92%; /* 양옆 여백을 최소화하여 콘텐츠 확보 */
+    }
+
+    .section_container {
+        min-width: 100%; /* 고정 min-width 해제 */
+        padding: 1.5rem; /* 내부 여백 추가 */
+        min-height: auto; /* 모바일에서는 내용만큼 늘어나도록 */
+    }
+
+    .section_title {
+        font-size: 2rem; /* 폰트 크기 조절 */
+        letter-spacing: 0.1rem;
+    }
+
+    .section_h3 {
+        font-size: 0.75rem;
+    }
+}
+
+/* 2. 아이폰 기본 (iPhone 13, 14, 15, 16 - 보통 390px ~ 393px) */
+/* 갤럭시와 유사하지만, 노치/다이내믹 아일랜드 및 하단 바를 고려한 세부 조정 */
+@media screen and (max-width: 393px) {
+    .main_container {
+        padding-top: 4.5rem; /* 모바일 헤더 높이에 맞게 조절 */
+    }
+
+    .section_header {
+        padding-left: 1rem;
+    }
+
+    .footer_wrapper {
+        height: 6rem; /* 푸터 높이 축소 */
+        padding-bottom: env(safe-area-inset-bottom); /* 아이폰 하단 홈바 영역 대응 */
+    }
+}

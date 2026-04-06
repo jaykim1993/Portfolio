@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import MatrixBackground from './MatrixBackground';
+import './IntroContainer.css'
 
 if (typeof window !== 'undefined') {
   const fontLink = document.createElement('link');
@@ -129,7 +130,6 @@ export default function IntroContainer({ children, onSkip }) {
 }
 
 // --- 스타일 객체 ---
-
 const introContainerStyle = {
   position: 'fixed',
   inset: 0,
@@ -138,8 +138,8 @@ const introContainerStyle = {
   display: 'flex',
   alignItems: 'center',
   justifyContent: 'center',
-  padding: '1rem', // 모바일에서 박스가 화면 끝에 붙지 않도록 여백 추가
   overflow: 'hidden',
+  willChange: 'filter, opacity',
 };
 
 const typingBoxStyle = {
@@ -147,18 +147,18 @@ const typingBoxStyle = {
   zIndex: 1,
   color: '#fff',
   fontFamily: "'VT323', monospace",
-  // 💡 포인트: fixed width 대신 max-width와 % 사용
-  width: '100%',
-  maxWidth: '45rem', 
-  minHeight: '16rem', // 높이도 유동적으로
-  backgroundColor: 'rgba(10, 10, 10, 0.85)',
+  fontSize: '1.8rem', // 가독성을 위해 살짝 조절
+  backgroundColor: 'rgba(10, 10, 10, 0.85)', // 더 깊은 블랙
+  width: '45rem', // 터미널 비율에 맞게 살짝 넓힘
+  height: '16rem', // 헤더 공간 확보를 위해 높임
   border: '1px solid rgba(255, 255, 255, 0.2)',
-  borderRadius: '10px',
+  borderRadius: '10px', // 부드러운 모서리
   display: 'flex',
   flexDirection: 'column',
   overflow: 'hidden',
   backdropFilter: 'blur(10px)',
   boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+  transition: 'all 0.5s ease'
 };
 
 const skipButtonStyle = {

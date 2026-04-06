@@ -1,0 +1,36 @@
+/* --- Intro Terminal 모바일 최적화 --- */
+@media screen and (max-width: 430px) {
+    /* 1. 터미널 텍스트 크기 축소 */
+    div[style*="terminalContentStyle"], 
+    .terminal_content { 
+        font-size: 1.2rem !important; /* 1.8rem은 모바일에서 너무 큽니다 */
+        padding: 1rem !important;
+        line-height: 1.4 !important;
+    }
+
+    /* 2. 터미널 박스 높이 조절 */
+    div[style*="typingBoxStyle"] {
+        width: 95% !important;
+        min-height: 14rem !important;
+    }
+
+    /* 3. 상단 바 타이틀 숨기기 (공간 확보) */
+    div[style*="terminalTitleStyle"] {
+        display: none; 
+    }
+
+    /* 4. 커서 크기 조정 */
+    div[style*="cursorStyle"] {
+        width: 10px !important;
+        height: 1.4rem !important;
+    }
+
+    /* 5. 스킵 버튼 터치 영역 확보 */
+    button[style*="skipButtonStyle"] {
+        bottom: 5px !important;
+        right: 10px !important;
+        font-size: 0.9rem !important;
+        padding: 10px !important; /* 터치하기 쉽게 */
+        opacity: 0.6;
+    }
+}

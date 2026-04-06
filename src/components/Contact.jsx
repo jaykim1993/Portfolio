@@ -1,5 +1,6 @@
 import './Contact.css'
 import { useRef } from 'react';
+import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 import './Footer.css'
 
@@ -54,9 +55,18 @@ export default function Contact() {
           <div className="info_item">
             <h3 className="section_h3">SOCIAL</h3>
             <div className="link_group">
-              <a href="https://github.com" target="_blank" rel="noreferrer" className="contact_link">GitHub</a>
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="contact_link">LinkedIn</a>
-              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="contact_link">Instagram</a>
+              <a href="https://github.com/jaykim1993" target="_blank" rel="noreferrer" className="contact_link">
+                <FaGithub className="contact_icon" /> GitHub
+              </a>
+
+              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="contact_link">
+                <FaLinkedin className="contact_icon" /> LinkedIn
+              </a>
+
+              <a href="https://instagram.com" target="_blank" rel="noreferrer" className="contact_link">
+                <FaInstagram className="contact_icon" /> Instagram
+              </a>
+
             </div>
           </div>
         </div>

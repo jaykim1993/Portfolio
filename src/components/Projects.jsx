@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { FaGithub, FaLinkedin, FaInstagram, FaExternalLinkAlt } from 'react-icons/fa';
 import './Projects.css';
 
 export default function Projects() {
@@ -184,8 +185,8 @@ export default function Projects() {
             <div className="meta_item">
               <span className="meta_label">LINKS_</span>
               <div className="meta_value links">
-                {selectedProject.links.live && <a href={selectedProject.links.live} className="link_icon_btn">🌐 LIVE</a>}
-                <a href={selectedProject.links.github} className="link_icon_btn">🔗 GITHUB</a>
+                {selectedProject.links.live && <a href={selectedProject.links.live} className="link_icon_btn"><FaExternalLinkAlt className="contact_icon" /> LIVE</a>}
+                <a href={selectedProject.links.github} className="link_icon_btn"><FaGithub className="contact_icon" /> GITHUB</a>
               </div>
             </div>
           </div>

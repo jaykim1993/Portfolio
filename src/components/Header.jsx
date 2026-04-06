@@ -49,7 +49,9 @@ export default function Header({ isSkipped }) {
                 >
                     <img className="h_left_img" src='icons8.apng.png' alt="logo" />
                 </motion.div>
-                <span className="h_left_span" onClick={handleRefresh}>Portfolio | Jay Kim</span>
+                <span className="h_left_span" onClick={handleRefresh}>
+                    Portfolio <span className="mobile_hide">| Jay Kim</span>
+                </span>
             </div>
             <div className="h_right">
                 <a href="#intro" className="h_right_a" onClick={(e) => handleScroll(e, 'intro')}>Intro</a>

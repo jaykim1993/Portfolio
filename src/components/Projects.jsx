@@ -136,21 +136,25 @@ export default function Projects() {
       links: { github: "#", live: "#" }
     },
     {
-      id: 9,
-      title: "Management System",
-      tech: "React / MyBatis / Cloudtype",
-      period: "2024.01 - 2024.03",
-      role: "Full-stack Developer",
-      stack: ["React", "Spring Boot", "MyBatis", "Axios"],
-      goal: "기업 자원 관리를 위한 대시보드 및 REST API 개발.",
-      features: [
-        "Axios Interceptor를 통한 공통 에러 핸들링",
-        "MyBatis 동적 쿼리 최적화",
-        "Cloudtype 환경을 통한 클라우드 배포",
-        "기존 프론트엔드 프로젝트에 JAVA 기반의 Spring Boot 프레임워크와 MyBatis(Persistence Framework)를 활용하고, MySQL DBMS를 연동하여 '렌터카 예약 웹 서비스'를 개발. 백엔드 서버를 구축하고, Axios를 활용한 REST API 연동 구조로 전환. 완성된 풀스텍 서비스를 Cloudtype 클라우드 환경에 배포"
+      "id": 9,
+      "title": "Car Renting & Management System",
+      "tech": "React / Spring Boot / MySQL",
+      "period": "2025.12 - 2026.03",
+      "role": "Full-stack Developer",
+      "stack": ["React", "Axios", "Spring Boot", "MyBatis", "MySQL", "Cloudtype"],
+      "goal": "사용자 예약 시스템과 관리자 전용 대시보드를 포함한 통합 렌터카 서비스 개발",
+      "features": [
+        "사용자: 실시간 차량 검색, 필터링 및 예약 기능 구현",
+        "관리자: 대시보드를 통한 차량 재고 관리, 예약 현황 조회 및 데이터 시각화",
+        "Axios Interceptor를 활용한 전역 에러 핸들링 및 효율적인 API 통신 구조 설계",
+        "MyBatis 동적 쿼리를 적용하여 복잡한 조건의 차량 검색 성능 최적화",
+        "Cloudtype PaaS 환경을 통해 백엔드 및 데이터베이스 클라우드 배포 완료"
       ],
-      gifUrl: "/gifs/p2.gif",
-      links: { github: "#", live: "" }
+      "gifUrl": "/gifs/p2.gif",
+      "links": {
+        "github": "https://github.com/jaykim1993/charang2026",
+        "live": "https://port-0-charang2026-mma8g0s58d0aa22f.sel3.cloudtype.app/"
+      }
     }
   ];
 

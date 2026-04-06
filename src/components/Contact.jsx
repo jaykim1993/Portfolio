@@ -59,7 +59,7 @@ export default function Contact() {
                 <FaGithub className="contact_icon" /> GitHub
               </a>
 
-              <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="contact_link">
+              <a href="www.linkedin.com/in/kim-jay-755115401" target="_blank" rel="noreferrer" className="contact_link">
                 <FaLinkedin className="contact_icon" /> LinkedIn
               </a>
 

@@ -11,7 +11,8 @@ export default function Intro() {
       <div className="intro_main">
         <div className="intro_profile">
           <div className="profile_image_box">
-            <div className="image_placeholder">PHOTO</div>
+            <img className="profile_img" src='profile2.png'/>
+            {/* <div className="image_placeholder">PHOTO</div> */}
           </div>
         </div>
 

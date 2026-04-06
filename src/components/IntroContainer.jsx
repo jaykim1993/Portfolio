@@ -85,18 +85,30 @@ export default function IntroContainer({ children, onSkip }) {
               )}
 
               <motion.div
-                animate={phase === 1 ? { scale: 1.05, color: "#00FF41", border: '2px solid #00FF41' } : {}}
-                style={typingBoxStyle}
-              >
-                <div style={{ width: '100%', position: 'relative' }}>
-                  {typedText}
-                  <Cursor phase={phase} />
-                </div>
+        animate={phase === 1 ? { scale: 1.02, borderColor: "#00FF41", boxShadow: '0 0 20px rgba(0, 255, 65, 0.2)' } : {}}
+        style={typingBoxStyle}
+      >
+        {/* 📟 터미널 상단 바 추가 */}
+        <div style={terminalHeaderStyle}>
+          <div style={dotContainerStyle}>
+            <span style={{...dotStyle, backgroundColor: '#FF5F56'}}></span>
+            <span style={{...dotStyle, backgroundColor: '#FFBD2E'}}></span>
+            <span style={{...dotStyle, backgroundColor: '#27C93F'}}></span>
+          </div>
+          <div style={terminalTitleStyle}>bash — jaykim — 80x24</div>
+        </div>
 
-                <button onClick={handleSkip} style={skipButtonStyle}>
-                  SKIP {`>>`}
-                </button>
-              </motion.div>
+        {/* 💻 터미널 내부 콘텐츠 */}
+        <div style={terminalContentStyle}>
+          <span style={{ color: '#00FF41', marginRight: '10px' }}>$</span>
+          {typedText}
+          <Cursor phase={phase} />
+        </div>
+
+        <button onClick={handleSkip} style={skipButtonStyle}>
+          SKIP_TERMINAL {`>>`}
+        </button>
+      </motion.div>
             </motion.div>
           )}
         </AnimatePresence>
@@ -134,29 +146,31 @@ const typingBoxStyle = {
   zIndex: 1,
   color: '#fff',
   fontFamily: "'VT323', monospace",
-  fontSize: '2.2rem',
-  backgroundColor: 'rgba(0, 0, 0, 0.75)',
-  width: '40rem',
-  height: '12.5rem',
-  padding: '1.2rem 1.2rem',
-  border: '2px solid #fff',
-  borderRadius: '4px',
-  whiteSpace: 'pre-wrap',
-  textAlign: 'left',
-  lineHeight: '1.4'
+  fontSize: '1.8rem', // 가독성을 위해 살짝 조절
+  backgroundColor: 'rgba(10, 10, 10, 0.85)', // 더 깊은 블랙
+  width: '45rem', // 터미널 비율에 맞게 살짝 넓힘
+  height: '16rem', // 헤더 공간 확보를 위해 높임
+  border: '1px solid rgba(255, 255, 255, 0.2)',
+  borderRadius: '10px', // 부드러운 모서리
+  display: 'flex',
+  flexDirection: 'column',
+  overflow: 'hidden',
+  backdropFilter: 'blur(10px)',
+  boxShadow: '0 20px 50px rgba(0,0,0,0.5)',
+  transition: 'all 0.5s ease'
 };
 
 const skipButtonStyle = {
   position: 'absolute',
-  bottom: '-2.5rem',
-  right: '0',
+  bottom: '10px',
+  right: '15px',
   background: 'none',
   border: 'none',
-  color: '#fff',
+  color: 'rgba(255, 255, 255, 0.3)',
   fontFamily: "'VT323', monospace",
-  fontSize: '1.3rem',
+  fontSize: '1rem',
   cursor: 'pointer',
-  textDecoration: 'underline',
+  transition: 'color 0.3s',
   padding: '5px'
 };
 
@@ -166,4 +180,39 @@ const cursorStyle = {
   height: '2rem',
   marginLeft: '8px',
   verticalAlign: 'text-bottom'
+};
+
+const terminalContentStyle = {
+  padding: '1.5rem',
+  whiteSpace: 'pre-wrap',
+  textAlign: 'left',
+  lineHeight: '1.5',
+  flex: 1,
+};
+
+const terminalHeaderStyle = {
+  display: 'flex',
+  alignItems: 'center',
+  padding: '10px 15px',
+  background: 'rgba(255, 255, 255, 0.1)', // 헤더 구분선
+  borderBottom: '1px solid rgba(255, 255, 255, 0.1)',
+};
+
+const dotContainerStyle = {
+  display: 'flex',
+  gap: '8px',
+};
+
+const dotStyle = {
+  width: '12px',
+  height: '12px',
+  borderRadius: '50%',
+};
+
+const terminalTitleStyle = {
+  flex: 1,
+  textAlign: 'center',
+  fontSize: '0.9rem',
+  color: 'rgba(255, 255, 255, 0.5)',
+  marginRight: '35px', // 버튼 공간만큼 왼쪽 밀기
 };

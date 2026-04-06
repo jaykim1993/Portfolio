@@ -108,7 +108,7 @@
     align-self: flex-end;
     /* 버튼을 오른쪽으로 정렬 */
     margin-top: 1.5rem;
-    width: 180px;
+    width: 100%;
     /* 고정 너비 혹은 30% 정도가 적당 */
     padding: 1rem;
     background: #e7e7e7;

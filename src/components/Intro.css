@@ -114,7 +114,15 @@
     overflow: hidden;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
-
+.profile_img{
+    width: 120%;
+    height: 120%;
+    /* 💡 핵심: 사진 비율을 유지하며 박스를 가득 채움 (찌그러짐 방지) */
+    object-fit: cover; 
+    /* 사진의 중심을 기준으로 맞춤 */
+    object-position: center; 
+    display: block;
+}
 .image_placeholder {
     font-size: 1rem;
     letter-spacing: 6px;

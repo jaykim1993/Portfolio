@@ -1,1 +1,245 @@
+/* --- 프로젝트 목록 그리드 --- */
+.projects_grid {
+    display: grid;
+    /* 💡 기존 그리드 설정 유지 */
+    grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr));
+    gap: 1.7rem;
+    padding: 2rem;
+    margin-top: 1rem;
+    width: 100%;
+    /* 💡 핵심: 부모(.section_inner) 높이에서 상단 요소들의 높이를 뺀 만큼만 차지 */
+    /* 100%는 부모의 전체 높이입니다. 제목이나 여백만큼 빼주면 딱 맞습니다. */
+    height: 700px;
+    
+    /* 💡 스크롤 활성화 */
+    overflow-y: auto;
+    overflow-x: hidden;
 
+    /* 💡 박스 내부 레이아웃이 깨지지 않게 설정 */
+    align-content: start; 
+
+    /* 스크롤바 커스텀 (섹션 스크롤바와 통일감) */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0, 255, 65, 0.3) transparent;
+}
+
+/* 크롬/사파리 스크롤바 디테일 */
+.projects_grid::-webkit-scrollbar {
+    width: 5px;
+}
+.projects_grid::-webkit-scrollbar-thumb {
+    background: rgba(0, 255, 65, 0.2);
+    border-radius: 10px;
+}
+.projects_grid::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 255, 65, 0.5);
+}
+
+.project_card {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(87, 255, 129, 0.1);
+    padding: 1.5rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.project_card:hover {
+    border-color: #57ff81;
+    background: rgba(87, 255, 129, 0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 255, 64, 0.1);
+}
+
+.project_id {
+    color: #61dafb;
+    font-size: 1rem;
+}
+
+.project_name {
+    font-size: 1.4rem;
+    margin: 0.3rem 0;
+    color: #fff;
+}
+
+.project_tech {
+    color: #999;
+    font-size: 1rem;
+}
+
+.tap_to_view {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: #61dafb;
+    opacity: 0.6;
+    letter-spacing: 1px;
+}
+
+
+
+.back_btn {
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+/* 상세 페이지 메타 그리드 */
+.detail_meta_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2rem;
+    margin: 2rem;
+}
+
+.meta_item {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 1rem;
+}
+
+.meta_label {
+    display: block;
+    color: #61dafb;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    font-family: 'VT323', monospace;
+}
+
+.meta_value {
+    font-size: 1.2rem;
+    color: #eee;
+}
+
+.tech_stack {
+    grid-column: 1 / -1;
+}
+
+.tag_cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag_mini {
+    background: rgba(87, 255, 129, 0.1);
+    color: #61dafb;
+    padding: 3px 8px;
+    border: 1px solid rgba(87, 255, 129, 0.2);
+    font-size: 0.9rem;
+    border-radius: 3px;
+}
+
+/* 터미널 스타일 블록 */
+.detail_features_block {
+    background: #050505;
+    border: 1px solid #222;
+    margin: 2rem;
+}
+
+.terminal_top_bar {
+    background: #111;
+    padding: 5px 12px;
+    font-size: 1rem;
+    color: #555;
+    border-bottom: 1px solid #222;
+}
+
+.terminal_body {
+    padding: 1.2rem;
+    height: 20rem;
+}
+
+.terminal_body ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.terminal_body li {
+    margin-bottom: 8px;
+    color: #ccc;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.project_one_liner {
+    color: #61dafb;
+    font-size: 1.6rem;
+}
+
+.prompt {
+    color: #61dafb;
+    margin-left: 50px;
+    margin-right: 20px;
+}
+
+/* 하단 버튼 */
+.detail_actions_row {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    margin: 2rem;
+    gap: 3rem;
+}
+.external_links{
+    flex: 1;
+}
+.link_icon_btn {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+    margin-right: 1.5rem;
+    border-bottom: 1px solid #444;
+    padding-bottom: 2px;
+}
+
+.play_gif_btn {
+    background: #57ff81;
+    color: #000;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: 'VT323', monospace;
+}
+
+.back_action_btn {
+    background: transparent;
+    border: 1px solid #444;
+    color: #888;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+/* 모달/GIF 스타일 */
+.gif_modal_overlay {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.9);
+    display: flex; align-items: center; justify-content: center;
+    z-index: 10000;
+}
+
+.gif_modal_content {
+    background: #000;
+    border: 1px solid #57ff81;
+    width: 80%; max-width: 800px;
+}
+
+.modal_header {
+    background: #111;
+    padding: 8px 15px;
+    display: flex; justify-content: space-between;
+    border-bottom: 1px solid #222;
+}
+
+.modal_title { color: #57ff81; font-size: 0.8rem; }
+
+.close_modal {
+    background: transparent; border: none; color: #fff;
+    font-size: 1.2rem; cursor: pointer;
+}
+
+.gif_container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}

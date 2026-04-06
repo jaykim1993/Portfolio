@@ -12,46 +12,48 @@ export default function Skills() {
   const stackFlow = [
     {
       layer: "01. Frontend",
+      category: "UI / UX",
       skills: [
-        { name: "HTML5", icon: <FaHtml5 color="#E34F26" /> },
-        { name: "CSS3", icon: <FaCss3Alt color="#1572B6" /> },
-        { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" /> },
-        { name: "React", icon: <FaReact color="#61DAFB" /> },
-        { name: "Vite", icon: <SiVite color="#FFD62E" /> },
-        { name: "VS Code", icon: <DiVisualstudio color="#007ACC" /> },
-        // 슬라이드 확인을 위해 추가된 예시 (실제 데이터에 따라 자동 조절)
-        // { name: "TypeScript", icon: <SiJavascript color="#3178C6" /> },
+        { name: "HTML5", icon: <FaHtml5 color="#E34F26" />, type: "MARKUP" },
+        { name: "CSS3", icon: <FaCss3Alt color="#1572B6" />, type: "STYLE" },
+        { name: "JavaScript", icon: <SiJavascript color="#F7DF1E" />, type: "LANG" },
+        { name: "React", icon: <FaReact color="#61DAFB" />, type: "LIB" },
+        { name: "Vite", icon: <SiVite color="#FFD62E" />, type: "TOOL" },
+        { name: "VS Code", icon: <DiVisualstudio color="#007ACC" />, type: "IDE" },
       ]
     },
     {
       layer: "02. Backend",
+      category: "SERVER / LOGIC",
       skills: [
-        { name: "Java", icon: <FaJava color="#007396" /> },
-        { name: "Spring Boot", icon: <SiSpringboot color="#6DB33F" /> },
-        { name: "Node.js", icon: <FaNodeJs color="#339933" /> },
-        { name: "Tomcat", icon: <SiApachetomcat color="#F8981D" /> },
-        { name: "MyBatis", icon: <FaLeaf color="#C82E2E" /> },
-        { name: "Lombok", icon: <DiDatabase color="#BC204B" /> },
-        { name: "Eclipse IDE", icon: <SiEclipseide color="#A270BA" /> },
+        { name: "Java", icon: <FaJava color="#007396" />, type: "LANG" },
+        { name: "Spring Boot", icon: <SiSpringboot color="#6DB33F" />, type: "FW" },
+        { name: "Node.js", icon: <FaNodeJs color="#339933" />, type: "ENV" },
+        { name: "Tomcat", icon: <SiApachetomcat color="#F8981D" />, type: "WASM" },
+        { name: "MyBatis", icon: <FaLeaf color="#C82E2E" />, type: "LIB" },
+        { name: "Lombok", icon: <DiDatabase color="#BC204B" />, type: "LIB" },
+        { name: "Eclipse IDE", icon: <SiEclipseide color="#A270BA" />, type: "IDE" },
       ]
     },
     {
       layer: "03. Database",
+      category: "DATA STORAGE",
       skills: [
-        { name: "MySQL", icon: <SiMysql color="#4479A1" /> },
-        { name: "MariaDB", icon: <SiMariadb color="#00758F" /> },
-        { name: "Redis", icon: <DiDatabase color="#D82C20" /> },
-        { name: "Oracle", icon: <FaJava color="#F80000" /> },
+        { name: "MySQL", icon: <SiMysql color="#4479A1" />, type: "DB" },
+        { name: "MariaDB", icon: <SiMariadb color="#00758F" />, type: "DB" },
+        { name: "Redis", icon: <DiDatabase color="#D82C20" />, type: "CACHE" },
+        { name: "Oracle", icon: <FaJava color="#F80000" />, type: "DB" },
       ]
     },
     {
       layer: "04. Analysis",
+      category: "DATA SCIENCE",
       skills: [
-        { name: "Python", icon: <FaPython color="#3776AB" /> },
-        { name: "RStudio", icon: <SiRstudioide color="#75AADB" /> },
-        { name: "Pandas", icon: <SiPandas color="#150458" /> },
-        { name: "Matplotlib", icon: <BiShapeTriangle color="#11557C" /> },
-        { name: "Jupyter", icon: <SiJupyter color="#F37626" /> },
+        { name: "Python", icon: <FaPython color="#3776AB" />, type: "LANG" },
+        { name: "RStudio", icon: <SiRstudioide color="#75AADB" />, type: "IDE" },
+        { name: "Pandas", icon: <SiPandas color="#150458" />, type: "LIB" },
+        { name: "Matplotlib", icon: <BiShapeTriangle color="#11557C" />, type: "VIS" },
+        { name: "Jupyter", icon: <SiJupyter color="#F37626" />, type: "TOOL" },
       ]
     }
   ];
@@ -79,6 +81,7 @@ export default function Skills() {
                   {/* 첫 번째 세트 */}
                   {step.skills.map((skill, sIdx) => (
                     <div key={`original-${sIdx}`} className="skill_item_haptic">
+                      <span className="skill_type_badge">{skill.type}</span>
                       <span className="haptic_icon_box">{skill.icon}</span>
                       <span className="haptic_name_text">{skill.name}</span>
                     </div>

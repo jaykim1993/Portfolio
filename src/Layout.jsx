@@ -51,7 +51,7 @@ export default function Layout() {
         visible: {
             opacity: 1,
             y: 0,
-            height: 816,
+            height: "auto",
             transition: {
                 duration: 4,
                 ease: [0.3, 1, 0.3, 1],
@@ -110,7 +110,7 @@ export default function Layout() {
                     <motion.section id="intro" variants={itemVariants} className="section_container">
                         <Intro />
                     </motion.section>
-                    <motion.section id="skills" variants={itemVariants} className="section_container">
+                    <motion.section id="tech Stack" variants={itemVariants} className="section_container">
                         <Skills />
                     </motion.section>
                     <motion.section id="projects" variants={itemVariants} className="section_container">

@@ -70,6 +70,7 @@
 
 /* 컬럼 헤더 */
 .column_header_haptic {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,6 +103,7 @@
 
 /* 5. 개별 기술 아이템 & 햅틱 효과 */
 .skill_item_haptic {
+  position: relative;
   height: 110px;
   flex-shrink: 0;
   display: flex;
@@ -121,7 +123,25 @@
   box-shadow: 0 0 20px rgba(97, 218, 251, 0.3);
 }
 
-
+.skill_type_badge {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.6rem;
+    line-height: 1;
+    
+    padding: 2px 6px;
+    background: rgba(0, 255, 65, 0.1); /* 배경 투명도 조절 */
+    color: #00FF41; /* 매트릭스 그린 */
+    
+    border-right: 1px solid rgba(0, 255, 65, 0.3);
+    border-bottom: 1px solid rgba(0, 255, 65, 0.3);
+    border-radius: 3px 0 3px 0; /* 좌측 상단만 박스 곡률에 맞춤 */
+    
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    pointer-events: none; /* 마우스 이벤트 방해 금지 */
+}
 
 .haptic_icon_box {
   font-size: 3rem;

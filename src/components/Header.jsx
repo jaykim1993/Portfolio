@@ -85,12 +85,6 @@ export default function Header({ isSkipped }) {
                         <span className="lang_label">Language</span>
                         <span className="lang_divider">|</span>
                         <span className="current_name">{currentLanguage.name}</span>
-                        <motion.span
-                            animate={{ rotate: isOpen ? 180 : 0 }}
-                            className="arrow"
-                        >
-                            ▾
-                        </motion.span>
                     </button>
 
                     <AnimatePresence>

@@ -1,3 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=VT323&family=Noto+Sans+KR:wght@400;700&display=swap');
+
+:root {
+  /* 폰트 변수 설정 */
+  --font-main: 'Noto Sans KR', sans-serif;
+  --font-code: 'VT323', monospace;
+}
+
+body {
+  font-family: var(--font-main);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  /* 맥/아이폰에서 글자를 부드럽게 */
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  word-break: keep-all;
+  /* 한글 줄바꿈을 단어 단위로 (가독성 향상) */
+}
+
+.section_subtitle,
+.lang_btn {
+  font-family: var(--font-code);
+}
+
 * {
   margin: 0;
   padding: 0;

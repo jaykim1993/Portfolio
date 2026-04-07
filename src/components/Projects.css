@@ -153,7 +153,7 @@
 .terminal_body ul {
     list-style: none;
     padding: 0;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
 }
 
 .terminal_body li {
@@ -162,10 +162,12 @@
     font-size: 1rem;
     line-height: 1.5;
 }
+
 .terminal_body li p {
-    font-size: 1.8rem;
-    margin-bottom: 8px;
+    font-size: 1.6rem;
+    line-height: 60px;
 }
+
 .project_one_liner {
     color: #61dafb;
     font-size: 1.6rem;
@@ -199,22 +201,31 @@
     padding-bottom: 2px;
 }
 
-.play_gif_btn {
-    background: #57ff81;
-    color: #000;
-    border: none;
-    padding: 8px 16px;
-    font-weight: bold;
-    cursor: pointer;
-    font-family: 'VT323', monospace;
-}
 
+
+
+.play_gif_btn,
 .back_action_btn {
-    background: transparent;
+    background: #050505;
     border: 1px solid #444;
     color: #888;
+    border-radius: 5px;
     padding: 8px 16px;
+    font-weight: 500;
     cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.back_action_btn:hover {
+    border-color: #57ff81;
+    color: #57ff81;
+    box-shadow: 0 0 10px rgba(0, 255, 64, 0.3);
+}
+
+.play_gif_btn:hover {
+    border-color: #61dafb;
+    color: #61dafb;
+    box-shadow: 0 0 10px #61dafb7a;
 }
 
 /* 모달/GIF 스타일 */
@@ -307,7 +318,7 @@
     }
 
     .terminal_body {
-        padding: 1rem;
+        padding: 0.8rem;
         height: auto;
         /* 내용에 따라 늘어나도록 (모바일은 스크롤보다 펼침이 유리) */
         min-height: 15rem;
@@ -316,6 +327,11 @@
     .terminal_body li {
         font-size: 0.85rem;
         word-break: keep-all;
+    }
+
+    .terminal_body li p {
+        font-size: 1rem;
+        margin-bottom: 5px;
     }
 
     .prompt {

@@ -124,23 +124,27 @@
 }
 
 .skill_type_badge {
-    position: absolute;
-    top: 0;
-    left: 0;
-    font-size: 0.6rem;
-    line-height: 1;
-    
-    padding: 2px 6px;
-    background: rgba(0, 255, 65, 0.1); /* 배경 투명도 조절 */
-    color: #00FF41; /* 매트릭스 그린 */
-    
-    border-right: 1px solid rgba(0, 255, 65, 0.3);
-    border-bottom: 1px solid rgba(0, 255, 65, 0.3);
-    border-radius: 3px 0 3px 0; /* 좌측 상단만 박스 곡률에 맞춤 */
-    
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    pointer-events: none; /* 마우스 이벤트 방해 금지 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 0.6rem;
+  line-height: 1;
+
+  padding: 2px 6px;
+  background: rgba(0, 255, 65, 0.1);
+  /* 배경 투명도 조절 */
+  color: #00FF41;
+  /* 매트릭스 그린 */
+
+  border-right: 1px solid rgba(0, 255, 65, 0.3);
+  border-bottom: 1px solid rgba(0, 255, 65, 0.3);
+  border-radius: 3px 0 3px 0;
+  /* 좌측 상단만 박스 곡률에 맞춤 */
+
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  pointer-events: none;
+  /* 마우스 이벤트 방해 금지 */
 }
 
 .haptic_icon_box {
@@ -233,7 +237,6 @@
 
   /* 1. 전체 파이프라인 컨테이너: 중앙 정렬 추가 */
   .pipeline_wrapper {
-    padding: 2rem 1rem;
     display: flex;
     justify-content: center;
     width: 100%;
@@ -264,9 +267,11 @@
     /* 기둥 내부 요소들 중앙 정렬 */
     margin: 0;
   }
-  .flow_column_haptic::before{
+
+  .flow_column_haptic::before {
     display: none;
   }
+
   /* 4. 기둥 타이틀 조정 */
   .column_title_haptic {
     font-size: 0.9rem;
@@ -318,9 +323,11 @@
     /* 1열로 세로 배치 전환 */
     gap: 2rem;
   }
-  .flow_column_haptic::before{
+
+  .flow_column_haptic::before {
     display: none;
   }
+
   .vertical_slide_viewport {
     height: 180px;
     /* 1열일 때는 높이를 다시 조금 늘려줌 */

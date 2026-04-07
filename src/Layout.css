@@ -11,22 +11,27 @@
 }
 
 .content_wrapper {
-    width: 90%;          /* PC에서도 너무 좁지 않게 90%로 시작 */
-    max-width: 1200px;   /* rem 대신 px이 관리하기 편합니다 */
+    width: 90%;
+    /* PC에서도 너무 좁지 않게 90%로 시작 */
+    max-width: 1200px;
+    /* rem 대신 px이 관리하기 편합니다 */
     margin: 0 auto;
 }
 
 .section_container {
     width: 100%;
     /* ⚠️ 중요: 모바일 대응을 위해 아래 고정값들을 해제해야 합니다 */
-    min-height: auto;    /* 고정 높이 해제 */
-    min-width: 0;        /* 50rem 고정값 해제 (이게 화면 터지는 주원인) */
-    
+    min-height: auto;
+    /* 고정 높이 해제 */
+    min-width: 0;
+    /* 50rem 고정값 해제 (이게 화면 터지는 주원인) */
+
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* center 대신 위에서부터 차곡차곡 */
+    justify-content: flex-start;
+    /* center 대신 위에서부터 차곡차곡 */
     align-items: center;
-    
+
     scroll-margin-top: 6rem;
     position: relative;
     border-radius: 20px;
@@ -34,7 +39,8 @@
     backdrop-filter: blur(10px);
     margin-bottom: 3rem;
     transition: box-shadow 0.2s ease;
-    overflow: hidden;    /* 내부 요소가 삐져나가는 것 방지 */
+    overflow: hidden;
+    /* 내부 요소가 삐져나가는 것 방지 */
 }
 
 /* .section_inner {
@@ -45,10 +51,12 @@
 } */
 .section_inner {
     width: 100%;
-    max-width: 100%;     /* 부모에 맞춤 */
+    max-width: 100%;
+    /* 부모에 맞춤 */
     margin: 0 auto;
-    padding: 3rem 2rem;  /* PC 여백 */
-    height: auto !important; 
+    /* padding: 3rem 2rem; */
+    /* PC 여백 */
+    height: auto !important;
     min-height: auto !important;
 }
 
@@ -106,21 +114,26 @@
 
 @media screen and (max-width: 430px) {
     .content_wrapper {
-        width: 95%;      /* 모바일은 거의 꽉 차게 */
+        width: 95%;
+        /* 모바일은 거의 꽉 차게 */
     }
 
     .main_container {
-        padding-top: 4rem; /* 헤더 높이만큼만 */
+        padding-top: 4rem;
+        /* 헤더 높이만큼만 */
     }
 
     .section_container {
-        border-radius: 12px; /* 모바일은 조금 더 날카롭게 */
+        border-radius: 12px;
+        /* 모바일은 조금 더 날카롭게 */
         margin-bottom: 1.5rem;
-        padding: 0;      /* 내부 여백은 inner에서 조절 */
+        padding: 0;
+        /* 내부 여백은 inner에서 조절 */
     }
 
     .section_inner {
-        padding: 2rem 1rem; /* 모바일 전용 좁은 패딩 */
+        padding: 2rem 1rem;
+        /* 모바일 전용 좁은 패딩 */
     }
 
     .section_title {

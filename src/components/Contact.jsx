@@ -79,15 +79,13 @@ export default function Contact() {
               새로운 프로젝트 제안이나 궁금한 점이 있다면 언제든 환영입니다!
               </p> */}
             <p className="contact_word">
-              I’m always open to new projects, creative ideas, or opportunities to be part of your visions.
+              " I’m always open to new projects, creative ideas, or opportunities! "
             </p>
 
             <form ref={form} onSubmit={sendEmail} className="contact_form">
               <div className="input_row">
-                <div className="input_row">
-                  <input type="text" name="user_name" placeholder="Name" required className="input_name" />
-                  <input type="email" name="user_email" placeholder="Email Address" required className="input_email" />
-                </div>
+                <input type="text" name="user_name" placeholder="Name" required className="input_name" />
+                <input type="email" name="user_email" placeholder="Email Address" required className="input_email" />
               </div>
               <textarea name="user_message" placeholder="How can I help you?" rows="12" required />
               <button type="submit" className="submit_btn">Send Message</button>

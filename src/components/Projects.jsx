@@ -163,7 +163,7 @@ export default function Projects() {
       period: "2025.12 - 2026.03",
       role: "Full-stack Developer",
       stack: ["React", "Axios", "Spring Boot", "MyBatis", "MySQL", "Cloudtype"],
-      goal: "An integrated rental service featuring a real-time user reservation system and an admin dashboard for data-driven management.",
+      goal: "Real-time rental platform with a data-driven admin dashboard.",
       features: [
         "Implemented real-time vehicle search, multi-criteria filtering, and streamlined booking flows for end-users.",
         "Developed an Admin Dashboard for inventory control, reservation tracking, and data visualization.",
@@ -229,8 +229,8 @@ export default function Projects() {
           </div>
 
           <div className="detail_actions_row">
-            <button className="play_gif_btn" onClick={() => setSelectedProject(null)}>← BACK_TO_LIST</button>
-            <button className="play_gif_btn" onClick={() => setShowGif(true)}>▶ PLAY_DEMO</button>
+            <button className="back_action_btn" onClick={() => setSelectedProject(null)}>BACK TO LIST</button>
+            <button className="play_gif_btn" onClick={() => setShowGif(true)}>PLAY DEMO</button>
           </div>
         </div>
 

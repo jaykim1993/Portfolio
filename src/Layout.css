@@ -114,7 +114,7 @@
 
 @media screen and (max-width: 430px) {
     .content_wrapper {
-        width: 95%;
+        width: 100%;
         /* 모바일은 거의 꽉 차게 */
     }
 
@@ -129,11 +129,6 @@
         margin-bottom: 1.5rem;
         padding: 0;
         /* 내부 여백은 inner에서 조절 */
-    }
-
-    .section_inner {
-        padding: 2rem 1rem;
-        /* 모바일 전용 좁은 패딩 */
     }
 
     .section_title {

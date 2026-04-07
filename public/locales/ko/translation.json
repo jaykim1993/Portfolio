@@ -51,7 +51,7 @@
         "title": "영화관 메인 및 예매 시스템 구축",
         "tech": "HTML5 / CSS3 / JavaScript",
         "period": "2025.10 - 2025.10",
-        "role": "Frontend Developer (2인 협업)",
+        "role": "Frontend Developer",
         "stack": [
           "HTML5",
           "CSS3",
@@ -121,7 +121,7 @@
       },
       {
         "id": 4,
-        "title": "SpringBoot 기반 레스토랑 리뷰 통합 관리 도구",
+        "title": "레스토랑 리뷰 통합 관리 도구",
         "tech": "Spring Boot / MySQL / Thymeleaf",
         "period": "2026.02 - 2026.02",
         "role": "Full-Stack Developer",

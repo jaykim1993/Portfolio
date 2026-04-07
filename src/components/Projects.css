@@ -8,11 +8,12 @@
 
     /* 💡 핵심: 헤더 높이(약 120px~150px)를 제외한 나머지를 고정 높이로 설정 */
     /* vh 단위를 써도 좋고, 부모가 flex라면 flex-grow를 써도 됩니다. */
-    height: calc(100vh - 250px) !important; 
-    min-height: 300px; /* 너무 작아지는 것 방지 */
+    height: calc(100vh - 250px) !important;
+    min-height: 300px;
+    /* 너무 작아지는 것 방지 */
 
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    
+
     /* 💡 내용이 넘쳐도 그리드 자체 높이는 고정, 내부 스크롤만 발생 */
     overflow-y: auto;
     overflow-x: hidden;
@@ -32,11 +33,12 @@
     padding: 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
-    
+
     /* 💡 카드들끼리 높이가 다르면 지저분하므로 높이 고정 또는 최소 높이 설정 */
     display: flex;
     flex-direction: column;
-    height: 182px; /* 카드의 높이를 고정하면 그리드가 더 정갈해집니다 */
+    height: 182px;
+    /* 카드의 높이를 고정하면 그리드가 더 정갈해집니다 */
 }
 
 .project_card:hover {
@@ -52,7 +54,7 @@
 }
 
 .project_name {
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     margin: 0.3rem 0;
     color: #fff;
 }
@@ -271,19 +273,26 @@
 
     /* 1. 프로젝트 리스트 그리드 조정 */
 
-.projects_grid {
+    .projects_grid {
         /* 모바일에서는 헤더가 더 커질 수 있으므로 계산값 조정 */
         height: auto !important;
         padding: 1rem;
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }
+
     .project_card {
-        padding: 1.2rem;
+        padding: 1rem;
     }
 
     .project_name {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
+
+    .project_tech {
+        font-size: 0.9rem;
+    }
+
+
 
     /* 2. 상세 페이지 메타 그리드 (2열 -> 1열) */
     .detail_meta_grid {

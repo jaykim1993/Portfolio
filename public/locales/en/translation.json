@@ -48,83 +48,126 @@
     "data": [
       {
         "id": 1,
-        "title": "Restaurant Review System",
-        "tech": "Spring Boot / MySQL / Thymeleaf",
-        "period": "2023.09 - 2023.10",
-        "role": "Backend Lead",
-        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-        "goal": "Building a CRUD-based review platform with data simulation.",
+        "title": "Cinema Main & Reservation System",
+        "tech": "HTML5 / CSS3 / JavaScript",
+        "period": "2025.10",
+        "role": "Frontend Developer",
+        "stack": [
+          "HTML5",
+          "CSS3",
+          "JavaScript",
+          "VS Code"
+        ],
+        "goal": "Design a structured web architecture using semantic markup and implement dynamic reservation UIs",
         "features": [
-          "Enhanced code reusability via Thymeleaf layout separation",
-          "Implemented access control using Spring Security",
-          "Conducted data testing with 1,800 Stored Procedure records"
+          "Ensured web standards and scalability through strategic semantic markup design",
+          "Implemented state persistence and page routing logic using Browser Cookies",
+          "Optimized real-time data handling for seat selection using 2D array manipulation"
         ],
         "gifUrl": "/gifs/p1.gif",
-        "links": { "github": "#", "live": "#" }
+        "links": {
+          "github": "https://github.com/jaykim1993/mega",
+          "live": "https://jaykim1993.github.io/mega/"
+        }
       },
       {
         "id": 2,
-        "title": "Restaurant Review System",
-        "tech": "Spring Boot / MySQL / Thymeleaf",
-        "period": "2023.09 - 2023.10",
-        "role": "Backend Lead",
-        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-        "goal": "Building a CRUD-based review platform with data simulation.",
-        "features": [
-          "Enhanced code reusability via Thymeleaf layout separation",
-          "Implemented access control using Spring Security",
-          "Conducted data testing with 1,800 Stored Procedure records"
+        "title": "OTT Service Web Platform Frontend",
+        "tech": "React / Vite / Context API",
+        "period": "2025.11",
+        "role": "Frontend Developer",
+        "stack": [
+          "React",
+          "Vite",
+          "JavaScript",
+          "Context API",
+          "TMDB API"
         ],
-        "gifUrl": "/gifs/p1.gif",
-        "links": { "github": "#", "live": "#" }
+        "goal": "Build a component-based architecture and integrate external APIs for dynamic content delivery",
+        "features": [
+          "ID: 1234 / PW: 1234",
+          "Streamlined user interactions by managing global states with React Context API",
+          "Integrated TMDB API to dynamically map large-scale raw movie data into UI components",
+          "Established modular component structures to enhance Git-based collaboration efficiency"
+        ],
+        "gifUrl": "/gifs/p2.gif",
+        "links": {
+          "github": "https://github.com/parkch9911/ott-2jo-1112",
+          "live": "https://parkch9911.github.io/ott-2jo-1112/"
+        }
       },
       {
         "id": 3,
-        "title": "Restaurant Review System",
-        "tech": "Spring Boot / MySQL / Thymeleaf",
-        "period": "2023.09 - 2023.10",
-        "role": "Backend Lead",
-        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-        "goal": "Building a CRUD-based review platform with data simulation.",
-        "features": [
-          "Enhanced code reusability via Thymeleaf layout separation",
-          "Implemented access control using Spring Security",
-          "Conducted data testing with 1,800 Stored Procedure records"
+        "title": "Terminal Reservation Database Design",
+        "tech": "MySQL / Workbench / ERD",
+        "period": "2025.11",
+        "role": "Database Designer",
+        "stack": [
+          "MySQL",
+          "MySQL Workbench",
+          "SQL"
         ],
-        "gifUrl": "/gifs/p1.gif",
-        "links": { "github": "#", "live": "#" }
+        "goal": "Execute full-cycle DB modeling from requirements analysis to logical/physical design based on normalization principles",
+        "features": [
+          "Minimized data redundancy and ensured integrity by applying 3rd Normal Form (3NF)",
+          "Designed a service-oriented relational model by distinguishing Master and Transactional tables",
+          "Optimized complex SQL queries (JOIN, Subqueries) to improve data retrieval performance"
+        ],
+        "gifUrl": "/gifs/p3.gif",
+        "links": {
+          "github": "#",
+          "live": "#"
+        }
       },
       {
         "id": 4,
-        "title": "Restaurant Review System",
+        "title": "Restaurant Review Management System",
         "tech": "Spring Boot / MySQL / Thymeleaf",
-        "period": "2023.09 - 2023.10",
-        "role": "Backend Lead",
-        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-        "goal": "Building a CRUD-based review platform with data simulation.",
-        "features": [
-          "Enhanced code reusability via Thymeleaf layout separation",
-          "Implemented access control using Spring Security",
-          "Conducted data testing with 1,800 Stored Procedure records"
+        "period": "2026.02",
+        "role": "Full-Stack Developer",
+        "stack": [
+          "Java",
+          "Spring Boot",
+          "MySQL",
+          "Thymeleaf",
+          "Spring MVC"
         ],
-        "gifUrl": "/gifs/p1.gif",
-        "links": { "github": "#", "live": "#" }
+        "goal": "Develop a web service using Spring Boot MVC architecture with integrated CRUD and data calculation features",
+        "features": [
+          "Separated concerns through Controller-Service-Repository layers to improve maintainability",
+          "Implemented automated logic for real-time rating averages using MySQL integration",
+          "Enhanced data navigation efficiency by implementing server-side pagination with Thymeleaf"
+        ],
+        "gifUrl": "/gifs/p4.gif",
+        "links": {
+          "github": "#",
+          "live": "#"
+        }
       },
       {
         "id": 5,
-        "title": "Restaurant Review System",
-        "tech": "Spring Boot / MySQL / Thymeleaf",
-        "period": "2023.09 - 2023.10",
-        "role": "Backend Lead",
-        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-        "goal": "Building a CRUD-based review platform with data simulation.",
-        "features": [
-          "Enhanced code reusability via Thymeleaf layout separation",
-          "Implemented access control using Spring Security",
-          "Conducted data testing with 1,800 Stored Procedure records"
+        "title": "Air Quality Data Analysis Project",
+        "tech": "Python / Pandas / Matplotlib",
+        "period": "2026.03",
+        "role": "Data Analyst",
+        "stack": [
+          "Python",
+          "Pandas",
+          "Matplotlib",
+          "Seaborn",
+          "Jupyter Notebook"
         ],
-        "gifUrl": "/gifs/p1.gif",
-        "links": { "github": "#", "live": "#" }
+        "goal": "Collect and preprocess public data to visualize air pollution trends in Seoul",
+        "features": [
+          "Ensured data integrity through rigorous preprocessing and missing value (NaN) handling",
+          "Developed data aggregation logic using Groupby operations to analyze annual pollution trends",
+          "Maximized data readability by generating multi-dimensional visualizations (Bar/Line charts)"
+        ],
+        "gifUrl": "/gifs/p5.gif",
+        "links": {
+          "github": "#",
+          "live": "#"
+        }
       },
       {
         "id": 6,
@@ -132,7 +175,12 @@
         "tech": "Spring Boot / MySQL / Thymeleaf",
         "period": "2023.09 - 2023.10",
         "role": "Backend Lead",
-        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "stack": [
+          "Java",
+          "Spring Boot",
+          "MySQL",
+          "Thymeleaf"
+        ],
         "goal": "Building a CRUD-based review platform with data simulation.",
         "features": [
           "Enhanced code reusability via Thymeleaf layout separation",
@@ -140,7 +188,10 @@
           "Conducted data testing with 1,800 Stored Procedure records"
         ],
         "gifUrl": "/gifs/p1.gif",
-        "links": { "github": "#", "live": "#" }
+        "links": {
+          "github": "#",
+          "live": "#"
+        }
       },
       {
         "id": 7,
@@ -148,7 +199,12 @@
         "tech": "Spring Boot / MySQL / Thymeleaf",
         "period": "2023.09 - 2023.10",
         "role": "Backend Lead",
-        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "stack": [
+          "Java",
+          "Spring Boot",
+          "MySQL",
+          "Thymeleaf"
+        ],
         "goal": "Building a CRUD-based review platform with data simulation.",
         "features": [
           "Enhanced code reusability via Thymeleaf layout separation",
@@ -156,7 +212,10 @@
           "Conducted data testing with 1,800 Stored Procedure records"
         ],
         "gifUrl": "/gifs/p1.gif",
-        "links": { "github": "#", "live": "#" }
+        "links": {
+          "github": "#",
+          "live": "#"
+        }
       },
       {
         "id": 8,
@@ -164,7 +223,12 @@
         "tech": "Spring Boot / MySQL / Thymeleaf",
         "period": "2023.09 - 2023.10",
         "role": "Backend Lead",
-        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "stack": [
+          "Java",
+          "Spring Boot",
+          "MySQL",
+          "Thymeleaf"
+        ],
         "goal": "Building a CRUD-based review platform with data simulation.",
         "features": [
           "Enhanced code reusability via Thymeleaf layout separation",
@@ -172,7 +236,10 @@
           "Conducted data testing with 1,800 Stored Procedure records"
         ],
         "gifUrl": "/gifs/p1.gif",
-        "links": { "github": "#", "live": "#" }
+        "links": {
+          "github": "#",
+          "live": "#"
+        }
       },
       {
         "id": 9,
@@ -180,9 +247,18 @@
         "tech": "React / Spring Boot / MySQL",
         "period": "2025.12 - 2026.03",
         "role": "Full-stack Developer",
-        "stack": ["React", "Axios", "Spring Boot", "MyBatis", "MySQL", "Cloudtype"],
+        "stack": [
+          "React",
+          "Axios",
+          "Spring Boot",
+          "MyBatis",
+          "MySQL",
+          "Cloudtype"
+        ],
         "goal": "Real-time rental platform with a data-driven admin dashboard.",
         "features": [
+          "GUEST ID: test PW: 1234",
+          "ADMIN ID: admin PW: 1234",
           "Implemented real-time vehicle search, multi-criteria filtering, and booking flows for users.",
           "Developed an admin dashboard for inventory control, reservation tracking, and data visualization.",
           "Optimized search performance by implementing MyBatis Dynamic SQL for complex queries.",

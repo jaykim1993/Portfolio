@@ -75,7 +75,7 @@ export default function Header({ isSkipped }) {
                 </span>
             </div>
             <div className="h_right">
-                <a href="#intro" className="h_right_a" onClick={(e) => handleScroll(e, 'intro')}>Intro</a>
+                <a href="#intro" className="h_right_a" onClick={(e) => handleScroll(e, 'intro')}>Intro<span className="mobile_hide">duction</span></a>
                 <a href="#skills" className="h_right_a" onClick={(e) => handleScroll(e, 'tech Stack')}>Tech<span className="mobile_hide"> Stack</span></a>
                 <a href="#projects" className="h_right_a" onClick={(e) => handleScroll(e, 'projects')}>Projects</a>
                 <a href="#contact" className="h_right_a" onClick={(e) => handleScroll(e, 'contacts')}>Contacts</a>

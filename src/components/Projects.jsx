@@ -5,11 +5,16 @@ import { useTranslation } from 'react-i18next';
 
 export default function Projects() {
   const { t } = useTranslation();
-  const [selectedProject, setSelectedProject] = useState(null);
+  // 1. 상태를 id로 변경
+  const [selectedId, setSelectedId] = useState(null);
+
+  // 2. 렌더링 시점에 현재 언어에 맞는 데이터 찾기
+  const projectData = t('projects.data', { returnObjects: true });
+  const selectedProject = Array.isArray(projectData)
+    ? projectData.find(p => p.id === selectedId)
+    : null;
   const [showGif, setShowGif] = useState(false);
 
-  // 💡 JSON에서 프로젝트 배열 데이터를 통째로 가져옴
-  const projectData = t('projects.data', { returnObjects: true });
 
   // 헤더 핸들스크롤
   const handleScroll = (e, id) => {
@@ -84,7 +89,7 @@ export default function Projects() {
           </div>
 
           <div className="detail_actions_row">
-            <button className="back_action_btn" onClick={(e) => {setSelectedProject(null); handleScroll(e, 'projects') }}>
+            <button className="back_action_btn" onClick={(e) => { setSelectedProject(null); handleScroll(e, 'projects') }}>
               {t('projects.ui.back')}
             </button>
             <button className="play_gif_btn" onClick={() => setShowGif(true)}>
@@ -122,7 +127,7 @@ export default function Projects() {
       <div className="projects_grid">
         {/* JSON에서 가져온 배열을 직접 map으로 순회 */}
         {Array.isArray(projectData) && projectData.map(p => (
-          <div key={p.id} className="project_card" onClick={(e) => {setSelectedProject(p); handleScroll(e, 'projects') }}>
+          <div key={p.id} className="project_card" onClick={(e) => { setSelectedId(p.id); handleScroll(e, 'projects'); }}>
             <span className="project_id"># {p.id}</span>
             <h2 className="project_name">{p.title}</h2>
             <p className="project_tech">{p.tech}</p>

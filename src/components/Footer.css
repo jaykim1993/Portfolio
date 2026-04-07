@@ -13,6 +13,8 @@
   justify-content: center;
   align-items: center;
   gap: 15px; /* 요소 간 간격 */
+  /* 줄바꿈 금지 (무조건 한 줄) */
+  white-space: nowrap;
 }
 
 .separator {
@@ -22,4 +24,32 @@
 
 .copyright_bar {
   color: #444; /* 카피라이트는 조금 더 어둡게 */
+}
+
+/* 태블릿 및 모바일 중간 사이즈 (768px 이하) */
+@media (max-width: 768px) {
+  .footer_content_bar {
+    gap: 8px; /* 간격 축소 */
+    font-size: 0.7rem; /* 글씨 크기 축소 */
+  }
+}
+
+/* 초소형 모바일 (480px 이하) */
+@media (max-width: 480px) {
+  .footer_content_bar {
+    gap: 5px; /* 간격 최소화 */
+    font-size: 0.6rem; /* 글씨 크기 최소화 */
+  }
+  
+  .separator {
+    margin: 0 2px;
+  }
+}
+
+/* 극단적으로 작은 화면 (320px 이하) 대응 */
+@media (max-width: 320px) {
+  .footer_content_bar {
+    font-size: 0.55rem;
+    gap: 3px;
+  }
 }

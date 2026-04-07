@@ -277,7 +277,7 @@
 
 .projects_grid {
         /* 모바일에서는 헤더가 더 커질 수 있으므로 계산값 조정 */
-        height: calc(100vh - 200px) !important;
+        height: auto !important;
         padding: 1rem;
         grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     }

@@ -8,6 +8,6 @@ createRoot(document.getElementById('root')).render(
   <Suspense fallback={<div>로딩 중...</div>}>
     <StrictMode>
       <App />
-    </StrictMode>,
+    </StrictMode>
   </Suspense>
 )

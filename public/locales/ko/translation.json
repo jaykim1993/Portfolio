@@ -48,12 +48,12 @@
     "data": [
       {
         "id": 1,
-        "title": "맛집 리뷰 시스템",
+        "title": "예시 시스템",
         "tech": "Spring Boot / MySQL / Thymeleaf",
         "period": "2023.09 - 2023.10",
         "role": "Backend Lead",
         "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "goal": "CRUD 기반의 예시 플랫폼 구축 및 데이터 시뮬레이션.",
         "features": [
           "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
           "Spring Security 권한별 접근 제어",
@@ -64,12 +64,12 @@
       },
       {
         "id": 2,
-        "title": "맛집 리뷰 시스템 (v2)",
+        "title": "예시 시스템 (v2)",
         "tech": "Spring Boot / MySQL / Thymeleaf",
         "period": "2023.09 - 2023.10",
         "role": "Backend Lead",
         "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "goal": "CRUD 기반의 예시 플랫폼 구축 및 데이터 시뮬레이션.",
         "features": [
           "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
           "Spring Security 권한별 접근 제어",
@@ -80,12 +80,12 @@
       },
       {
         "id": 3,
-        "title": "맛집 리뷰 시스템 (v3)",
+        "title": "예시 시스템 (v3)",
         "tech": "Spring Boot / MySQL / Thymeleaf",
         "period": "2023.09 - 2023.10",
         "role": "Backend Lead",
         "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "goal": "CRUD 기반의 예시 플랫폼 구축 및 데이터 시뮬레이션.",
         "features": [
           "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
           "Spring Security 권한별 접근 제어",
@@ -96,12 +96,12 @@
       },
       {
         "id": 4,
-        "title": "맛집 리뷰 시스템 (v4)",
+        "title": "예시 시스템 (v4)",
         "tech": "Spring Boot / MySQL / Thymeleaf",
         "period": "2023.09 - 2023.10",
         "role": "Backend Lead",
         "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "goal": "CRUD 기반의 예시 플랫폼 구축 및 데이터 시뮬레이션.",
         "features": [
           "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
           "Spring Security 권한별 접근 제어",
@@ -112,12 +112,12 @@
       },
       {
         "id": 5,
-        "title": "맛집 리뷰 시스템 (v5)",
+        "title": "예시 시스템 (v5)",
         "tech": "Spring Boot / MySQL / Thymeleaf",
         "period": "2023.09 - 2023.10",
         "role": "Backend Lead",
         "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "goal": "CRUD 기반의 예시 플랫폼 구축 및 데이터 시뮬레이션.",
         "features": [
           "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
           "Spring Security 권한별 접근 제어",
@@ -128,12 +128,12 @@
       },
       {
         "id": 6,
-        "title": "맛집 리뷰 시스템 (v6)",
+        "title": "예시 시스템 (v6)",
         "tech": "Spring Boot / MySQL / Thymeleaf",
         "period": "2023.09 - 2023.10",
         "role": "Backend Lead",
         "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "goal": "CRUD 기반의 예시 플랫폼 구축 및 데이터 시뮬레이션.",
         "features": [
           "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
           "Spring Security 권한별 접근 제어",
@@ -144,12 +144,12 @@
       },
       {
         "id": 7,
-        "title": "맛집 리뷰 시스템 (v7)",
+        "title": "예시 시스템 (v7)",
         "tech": "Spring Boot / MySQL / Thymeleaf",
         "period": "2023.09 - 2023.10",
         "role": "Backend Lead",
         "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "goal": "CRUD 기반의 예시 플랫폼 구축 및 데이터 시뮬레이션.",
         "features": [
           "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
           "Spring Security 권한별 접근 제어",
@@ -160,12 +160,12 @@
       },
       {
         "id": 8,
-        "title": "맛집 리뷰 시스템 (v8)",
+        "title": "예시 시스템 (v8)",
         "tech": "Spring Boot / MySQL / Thymeleaf",
         "period": "2023.09 - 2023.10",
         "role": "Backend Lead",
         "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
-        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "goal": "CRUD 기반의 예시 플랫폼 구축 및 데이터 시뮬레이션.",
         "features": [
           "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
           "Spring Security 권한별 접근 제어",

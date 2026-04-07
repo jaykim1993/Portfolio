@@ -13,6 +13,10 @@ export default function Projects() {
   const selectedProject = Array.isArray(projectData)
     ? projectData.find(p => p.id === selectedId)
     : null;
+  const englishProjectData = t('projects.data', { returnObjects: true, lng: 'en' });
+  const englishProject = Array.isArray(englishProjectData)
+    ? englishProjectData.find(p => p.id === selectedId)
+    : null;
   const [showGif, setShowGif] = useState(false);
 
 
@@ -34,6 +38,8 @@ export default function Projects() {
       });
     }
   };
+  // 첫 글자만 대문자로, 나머지는 소문자로 만드는 헬퍼 함수
+
   // 상세 페이지 뷰
   if (selectedProject) {
     return (
@@ -41,7 +47,7 @@ export default function Projects() {
         <div className="section_header">
           <h1 className="section_title">{selectedProject.title}</h1>
           <span className="section_subtitle">
-            / Root / Projects / {t('projects.header.subtitle', { lng: 'en' })}
+            / Root / Projects / {englishProject?.title}
           </span>
         </div>
 

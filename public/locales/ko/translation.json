@@ -1,0 +1,227 @@
+{
+  "intro": {
+    "header": {
+      "title": "IDENTITY",
+      "subtitle": "/ Root / IDENTITY"
+    },
+    "profile": {
+      "name": "김성중",
+      "role": "Full-stack Developer"
+    },
+    "who_i_am": {
+      "title": "WHO I AM",
+      "main_slogan": "\"논리와 경험을 잇는 전략적 빌더\"",
+      "sub_slogan": "산업 효율성을 풀스택 개발에 통합합니다"
+    },
+    "education": {
+      "title": "EDUCATION",
+      "industrial": "산업공학 학사",
+      "university": "아주대학교",
+      "course_title": "Full-stack Developer 과정",
+      "academy": "그린컴퓨터아카데미"
+    },
+    "experience": {
+      "title": "EXPERIENCE",
+      "manager_role": "에듀케이션 매니저",
+      "manager_company": "테크노짐 코리아",
+      "technician_role": "항타 및 폼워크 기술자",
+      "technician_company": "ADS Construction"
+    }
+  },
+  "projects": {
+    "header": {
+      "title": "PROJECTS",
+      "subtitle": "/ Root / Projects"
+    },
+    "ui": {
+      "view_details": "상세보기_",
+      "back": "목록으로",
+      "demo": "데모 실행",
+      "terminal_log": "terminal --project-logs",
+      "labels": {
+        "period": "PERIOD_",
+        "role": "ROLE_",
+        "stack": "STACK_",
+        "links": "LINKS_"
+      }
+    },
+    "data": [
+      {
+        "id": 1,
+        "title": "맛집 리뷰 시스템",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "features": [
+          "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
+          "Spring Security 권한별 접근 제어",
+          "1,800건의 Stored Procedure 기반 데이터 테스트"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 2,
+        "title": "맛집 리뷰 시스템 (v2)",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "features": [
+          "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
+          "Spring Security 권한별 접근 제어",
+          "1,800건의 Stored Procedure 기반 데이터 테스트"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 3,
+        "title": "맛집 리뷰 시스템 (v3)",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "features": [
+          "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
+          "Spring Security 권한별 접근 제어",
+          "1,800건의 Stored Procedure 기반 데이터 테스트"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 4,
+        "title": "맛집 리뷰 시스템 (v4)",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "features": [
+          "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
+          "Spring Security 권한별 접근 제어",
+          "1,800건의 Stored Procedure 기반 데이터 테스트"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 5,
+        "title": "맛집 리뷰 시스템 (v5)",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "features": [
+          "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
+          "Spring Security 권한별 접근 제어",
+          "1,800건의 Stored Procedure 기반 데이터 테스트"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 6,
+        "title": "맛집 리뷰 시스템 (v6)",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "features": [
+          "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
+          "Spring Security 권한별 접근 제어",
+          "1,800건의 Stored Procedure 기반 데이터 테스트"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 7,
+        "title": "맛집 리뷰 시스템 (v7)",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "features": [
+          "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
+          "Spring Security 권한별 접근 제어",
+          "1,800건의 Stored Procedure 기반 데이터 테스트"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 8,
+        "title": "맛집 리뷰 시스템 (v8)",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "CRUD 기반의 맛집 리뷰 플랫폼 구축 및 데이터 시뮬레이션.",
+        "features": [
+          "Thymeleaf 레이아웃 분리로 코드 재사용성 향상",
+          "Spring Security 권한별 접근 제어",
+          "1,800건의 Stored Procedure 기반 데이터 테스트"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 9,
+        "title": "렌터카 예약 및 관리 시스템",
+        "tech": "React / Spring Boot / MySQL",
+        "period": "2025.12 - 2026.03",
+        "role": "Full-stack Developer",
+        "stack": ["React", "Axios", "Spring Boot", "MyBatis", "MySQL", "Cloudtype"],
+        "goal": "실시간 예약 플랫폼과 데이터 기반 관리자 대시보드 구축.",
+        "features": [
+          "사용자: 실시간 차량 검색, 필터링 및 예약 기능 구현",
+          "관리자: 재고 관리, 예약 현황 조회 및 데이터 시각화 대시보드 개발",
+          "MyBatis 동적 쿼리를 적용하여 복잡한 조건의 검색 성능 최적화",
+          "Axios Interceptor를 활용한 전역 에러 핸들링 및 효율적인 API 구조 설계",
+          "Cloudtype PaaS 환경을 통한 풀스택 시스템 클라우드 배포 완료"
+        ],
+        "gifUrl": "/gifs/p2.gif",
+        "links": {
+          "github": "https://github.com/jaykim1993/charang2026",
+          "live": "https://port-0-charang2026-mma8g0s58d0aa22f.sel3.cloudtype.app/"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "header": {
+      "title": "CONTACTS",
+      "subtitle": "/ Root / Contacts"
+    },
+    "channel": {
+      "title": "CHANNEL",
+      "phone": "010-6674-6038"
+    },
+    "social": {
+      "title": "SOCIAL"
+    },
+    "direct": {
+      "title": "DIRECT CONTACT",
+      "slogan": "\"새로운 프로젝트, 창의적인 아이디어, 협업 기회는 언제나 환영입니다!\"",
+      "form": {
+        "name": "이름",
+        "email": "이메일 주소",
+        "message": "무엇을 도와드릴까요?",
+        "submit": "메시지 보내기"
+      }
+    },
+    "alert": {
+      "success": "메시지가 성공적으로 전송되었습니다! 곧 연락드릴게요.",
+      "fail": "전송에 실패했습니다. 나중에 다시 시도해주세요."
+    }
+  }
+}

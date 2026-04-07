@@ -56,8 +56,11 @@
     margin: 0 auto;
     /* padding: 3rem 2rem; */
     /* PC 여백 */
-    height: auto !important;
-    min-height: auto !important;
+    height: auto;
+    min-height: auto;
+    max-height: none;
+    display: flex;
+    flex-direction: column;
 }
 
 /* 제목 스타일도 여기에 둡니다 */
@@ -111,6 +114,13 @@
 }
 
 /* --- 반응형 레이아웃 추가 --- */
+@media screen and (min-width: 1025px) {
+    .section_inner {
+        height: 813.94px !important;
+        min-height: 813.94px !important;
+        max-height: 813.94px !important;
+    }
+}
 
 @media screen and (max-width: 430px) {
     .content_wrapper {
@@ -143,5 +153,11 @@
     .footer_wrapper {
         height: 5rem;
         padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    .section_inner {
+        height: auto !important;
+        min-height: auto !important;
+        max-height: none !important;
     }
 }

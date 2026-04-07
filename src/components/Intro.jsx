@@ -1,11 +1,14 @@
 import './Intro.css';
+import { useTranslation } from 'react-i18next';
 
 export default function Intro() {
+  const { t } = useTranslation();
+
   return (
     <div className="section_inner">
       <div className="section_header">
-        <h1 className="section_title">IDENTITY</h1>
-        <span className="section_subtitle">/ Root / IDENTITY</span>
+        <h1 className="section_title">{t('intro.header.title')}</h1>
+        <span className="section_subtitle">{t('intro.header.subtitle')}</span>
       </div>
 
       <div className="intro_main">
@@ -13,47 +16,43 @@ export default function Intro() {
           <div className="profile_image_box">
             <img className="profile_img" src='profile2.png' alt="Jay Kim" />
           </div>
-          {/* 이름 영역 추가 */}
           <div className="profile_info">
-            <h1 className="profile_name">JAY KIM</h1>
-            <p className="profile_role">Full-stack Developer</p>
+            <h1 className="profile_name">{t('intro.profile.name')}</h1>
+            <p className="profile_role">{t('intro.profile.role')}</p>
           </div>
         </div>
 
         <div className="intro_info">
-          {/* 💡 핵심 가치를 상단으로 배치하여 첫인상 강화 */}
           <section className="info_group identity_highlight">
-            <h3 className="section_h3">WHO I AM</h3>
+            <h3 className="section_h3">{t('intro.who_i_am.title')}</h3>
             <div className="greeting_box">
-              <p className="main_slogan">" Strategic Builder Connecting Logic and Experience "</p>
-              <p className="sub_slogan">Integrating Industrial Efficiency into Full-Stack Development</p>
+              <p className="main_slogan">{t('intro.who_i_am.main_slogan')}</p>
+              <p className="sub_slogan">{t('intro.who_i_am.sub_slogan')}</p>
             </div>
           </section>
 
           <div className="info_flex_container">
-            {/* 💡 학력 정보 */}
             <section className="info_group">
-              <h3 className="section_h3">EDUCATION</h3>
+              <h3 className="section_h3">{t('intro.education.title')}</h3>
               <div className="info_item">
-                <p className="info_label">BE in Industrial Engineering</p>
-                <p className="info_desc">Ajou University</p>
+                <p className="info_label">{t('intro.education.industrial')}</p>
+                <p className="info_desc">{t('intro.education.university')}</p>
               </div>
               <div className="info_item">
-                <p className="info_label">Full-Stack Developer Course</p>
-                <p className="info_desc">Green Computer Acamedy</p>
+                <p className="info_label">{t('intro.education.course_title')}</p>
+                <p className="info_desc">{t('intro.education.academy')}</p>
               </div>
             </section>
 
-            {/* 💡 경력 정보 (직무 중심) */}
             <section className="info_group">
-              <h3 className="section_h3">EXPERIENCE</h3>
+              <h3 className="section_h3">{t('intro.experience.title')}</h3>
               <div className="info_item">
-                <p className="info_label">Education Manager</p>
-                <p className="info_desc">Technogym Korea</p>
+                <p className="info_label">{t('intro.experience.manager_role')}</p>
+                <p className="info_desc">{t('intro.experience.manager_company')}</p>
               </div>
               <div className="info_item">
-                <p className="info_label">Piling & Formwork Technician</p>
-                <p className="info_desc">ADS Construction</p>
+                <p className="info_label">{t('intro.experience.technician_role')}</p>
+                <p className="info_desc">{t('intro.experience.technician_company')}</p>
               </div>
             </section>
           </div>
@@ -62,11 +61,3 @@ export default function Intro() {
     </div>
   );
 }
-
-
-// UIUX프론트, 백엔드(Java, Spring), Data분석(Python) SW개발자 (참여기업프로젝트 참여) 양성과정
-// 2025-08-29 ~ 2026-04-07
-// 1 )MegaBox 메인, 예매 사이트 2025-10-15 ~ 2025-10-17
-// 2) OTT 미니프로젝트 2025-11-10 ~ 2025-11-13
-// 3) MS UI 개발 프로젝트 2025-12-01 ~ 2025-12-29
-// 4) IMS Backend 프로젝트 2026-02-05 ~ 2026-03-05

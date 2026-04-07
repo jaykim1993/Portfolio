@@ -1,5 +1,7 @@
 import './Header.css'
-import { motion } from 'framer-motion'; // 1. motion 임포트
+import { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 export default function Header({ isSkipped }) {
 
@@ -25,6 +27,25 @@ export default function Header({ isSkipped }) {
         }
     };
 
+    const { i18n } = useTranslation();
+    const [isOpen, setIsOpen] = useState(false);
+
+    const languages = [
+        { code: 'ko', name: 'KOR', flag: '🇰🇷' },
+        { code: 'en', name: 'ENG', flag: '🇺🇸' },
+    ];
+
+    // 현재 언어가 한국어 계열이면 KOR, 아니면 ENG를 기본값으로 설정
+    const currentLanguage = languages.find(l => i18n.language?.startsWith(l.code)) || languages[0];
+
+    const handleChangeLanguage = (code) => {
+        i18n.changeLanguage(code);
+        setIsOpen(false);
+        // window.scrollTo({
+        //     top: 0,
+        //     behavior: 'smooth'
+        // });
+    };
 
     return (
         <motion.header
@@ -58,6 +79,43 @@ export default function Header({ isSkipped }) {
                 <a href="#skills" className="h_right_a" onClick={(e) => handleScroll(e, 'tech Stack')}>Tech Stack</a>
                 <a href="#projects" className="h_right_a" onClick={(e) => handleScroll(e, 'projects')}>Projects</a>
                 <a href="#contact" className="h_right_a" onClick={(e) => handleScroll(e, 'contacts')}>Contacts</a>
+                {/* 🌐 다크 테마 언어 선택기 */}
+                <div className="lang_selector_container">
+                    <button className="lang_btn" onClick={() => setIsOpen(!isOpen)}>
+                        <span className="lang_label">Language</span>
+                        <span className="lang_divider">|</span>
+                        <span className="current_name">{currentLanguage.name}</span>
+                        <motion.span
+                            animate={{ rotate: isOpen ? 180 : 0 }}
+                            className="arrow"
+                        >
+                            ▾
+                        </motion.span>
+                    </button>
+
+                    <AnimatePresence>
+                        {isOpen && (
+                            <motion.ul
+                                className="lang_dropdown"
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                transition={{ duration: 0.2 }}
+                            >
+                                {languages.map((lang) => (
+                                    <li
+                                        key={lang.code}
+                                        className={`lang_item ${i18n.language?.startsWith(lang.code) ? 'active' : ''}`}
+                                        onClick={() => handleChangeLanguage(lang.code)}
+                                    >
+                                        <span className="flag">{lang.flag}</span>
+                                        <span className="item_name">{lang.name}</span>
+                                    </li>
+                                ))}
+                            </motion.ul>
+                        )}
+                    </AnimatePresence>
+                </div>
             </div>
         </motion.header>
     )

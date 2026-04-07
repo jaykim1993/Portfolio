@@ -1,48 +1,42 @@
 /* --- 프로젝트 목록 그리드 --- */
 .projects_grid {
     display: grid;
-    /* 💡 기존 그리드 설정 유지 */
-    /* grid-template-columns: repeat(auto-fill, minmax(min(300px, 100%), 1fr)); */
     gap: 1.7rem;
     padding: 2rem;
     margin-top: 1rem;
     width: 100%;
-    /* 💡 핵심: 부모(.section_inner) 높이에서 상단 요소들의 높이를 뺀 만큼만 차지 */
-    /* 100%는 부모의 전체 높이입니다. 제목이나 여백만큼 빼주면 딱 맞습니다. */
-    height: auto !important;
+
+    /* 💡 핵심: 헤더 높이(약 120px~150px)를 제외한 나머지를 고정 높이로 설정 */
+    /* vh 단위를 써도 좋고, 부모가 flex라면 flex-grow를 써도 됩니다. */
+    height: calc(100vh - 250px) !important; 
+    min-height: 300px; /* 너무 작아지는 것 방지 */
+
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    /* 💡 스크롤 활성화 */
+    
+    /* 💡 내용이 넘쳐도 그리드 자체 높이는 고정, 내부 스크롤만 발생 */
     overflow-y: auto;
     overflow-x: hidden;
 
-    /* 💡 박스 내부 레이아웃이 깨지지 않게 설정 */
+    /* 박스 내부 레이아웃 고정 */
     align-content: start;
 
-    /* 스크롤바 커스텀 (섹션 스크롤바와 통일감) */
+    /* 스크롤바 디자인 (네온 그린 유지) */
     scrollbar-width: thin;
     scrollbar-color: rgba(0, 255, 65, 0.3) transparent;
 }
 
-/* 크롬/사파리 스크롤바 디테일 */
-.projects_grid::-webkit-scrollbar {
-    width: 5px;
-}
-
-.projects_grid::-webkit-scrollbar-thumb {
-    background: rgba(0, 255, 65, 0.2);
-    border-radius: 10px;
-}
-
-.projects_grid::-webkit-scrollbar-thumb:hover {
-    background: rgba(0, 255, 65, 0.5);
-}
-
+/* 카드 높이 통일 (선택 사항) */
 .project_card {
     background: rgba(0, 0, 0, 0.4);
     border: 1px solid rgba(87, 255, 129, 0.1);
     padding: 1.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
+    
+    /* 💡 카드들끼리 높이가 다르면 지저분하므로 높이 고정 또는 최소 높이 설정 */
+    display: flex;
+    flex-direction: column;
+    height: 180px; /* 카드의 높이를 고정하면 그리드가 더 정갈해집니다 */
 }
 
 .project_card:hover {
@@ -280,15 +274,13 @@
 @media screen and (max-width: 430px) {
 
     /* 1. 프로젝트 리스트 그리드 조정 */
-    .projects_grid {
-        grid-template-columns: 1fr;
-        /* 무조건 한 줄에 하나씩 */
-        padding: 1rem;
-        height: 500px;
-        /* 모바일 화면 높이에 맞춰 조정 */
-        gap: 1.2rem;
-    }
 
+.projects_grid {
+        /* 모바일에서는 헤더가 더 커질 수 있으므로 계산값 조정 */
+        height: calc(100vh - 200px) !important;
+        padding: 1rem;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    }
     .project_card {
         padding: 1.2rem;
     }

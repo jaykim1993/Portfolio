@@ -8,10 +8,10 @@ import {
 } from 'react-icons/si';
 import { DiDatabase, DiVisualstudio } from "react-icons/di";
 import { BiShapeTriangle } from 'react-icons/bi';
-export default function Skills() {
+
   const stackFlow = [
     {
-      layer: "01. Frontend",
+      id: "Frontend",
       category: "UI / UX",
       skills: [
         { name: "HTML5", icon: <FaHtml5 color="#E34F26" />, type: "MARKUP" },
@@ -23,7 +23,7 @@ export default function Skills() {
       ]
     },
     {
-      layer: "02. Backend",
+      id: "Backend",
       category: "SERVER / LOGIC",
       skills: [
         { name: "Java", icon: <FaJava color="#007396" />, type: "LANG" },
@@ -36,7 +36,7 @@ export default function Skills() {
       ]
     },
     {
-      layer: "03. Database",
+      id: "Database",
       category: "DATA STORAGE",
       skills: [
         { name: "MySQL", icon: <SiMysql color="#4479A1" />, type: "DB" },
@@ -46,7 +46,7 @@ export default function Skills() {
       ]
     },
     {
-      layer: "04. Analysis",
+      id: "Analysis",
       category: "DATA SCIENCE",
       skills: [
         { name: "Python", icon: <FaPython color="#3776AB" />, type: "LANG" },
@@ -57,6 +57,9 @@ export default function Skills() {
       ]
     }
   ];
+
+export default function Skills() {
+
 
   return (
     <div className="section_inner">
@@ -72,7 +75,7 @@ export default function Skills() {
             <div key={idx} className="flow_column_haptic">
               <div className="column_header_haptic">
                 {/* <div className="step_number_haptic">{idx + 1}</div> */}
-                <h2 className="column_title_haptic">{step.layer.split('.')[1]}</h2>
+                <h2 className="column_title_haptic">{step.id}</h2>
               </div>
 
               {/* 💡 슬라이드 창 (높이 제한) */}

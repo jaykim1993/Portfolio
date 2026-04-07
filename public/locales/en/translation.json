@@ -1,0 +1,227 @@
+{
+  "intro": {
+    "header": {
+      "title": "IDENTITY",
+      "subtitle": "/ Root / IDENTITY"
+    },
+    "profile": {
+      "name": "JAY KIM",
+      "role": "Full-stack Developer"
+    },
+    "who_i_am": {
+      "title": "WHO I AM",
+      "main_slogan": "\"Strategic Builder Connecting Logic and Experience\"",
+      "sub_slogan": "Integrating Industrial Efficiency into Full-Stack Development"
+    },
+    "education": {
+      "title": "EDUCATION",
+      "industrial": "BE in Industrial Engineering",
+      "university": "Ajou University",
+      "course_title": "Full-Stack Developer Course",
+      "academy": "Green Computer Academy"
+    },
+    "experience": {
+      "title": "EXPERIENCE",
+      "manager_role": "Education Manager",
+      "manager_company": "Technogym Korea",
+      "technician_role": "Piling & Formwork Technician",
+      "technician_company": "ADS Construction"
+    }
+  },
+  "projects": {
+    "header": {
+      "title": "PROJECTS",
+      "subtitle": "/ Root / Projects"
+    },
+    "ui": {
+      "view_details": "VIEW_DETAILS_",
+      "back": "BACK TO LIST",
+      "demo": "PLAY DEMO",
+      "terminal_log": "terminal --project-logs",
+      "labels": {
+        "period": "PERIOD_",
+        "role": "ROLE_",
+        "stack": "STACK_",
+        "links": "LINKS_"
+      }
+    },
+    "data": [
+      {
+        "id": 1,
+        "title": "Restaurant Review System",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "Building a CRUD-based review platform with data simulation.",
+        "features": [
+          "Enhanced code reusability via Thymeleaf layout separation",
+          "Implemented access control using Spring Security",
+          "Conducted data testing with 1,800 Stored Procedure records"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 2,
+        "title": "Restaurant Review System",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "Building a CRUD-based review platform with data simulation.",
+        "features": [
+          "Enhanced code reusability via Thymeleaf layout separation",
+          "Implemented access control using Spring Security",
+          "Conducted data testing with 1,800 Stored Procedure records"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 3,
+        "title": "Restaurant Review System",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "Building a CRUD-based review platform with data simulation.",
+        "features": [
+          "Enhanced code reusability via Thymeleaf layout separation",
+          "Implemented access control using Spring Security",
+          "Conducted data testing with 1,800 Stored Procedure records"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 4,
+        "title": "Restaurant Review System",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "Building a CRUD-based review platform with data simulation.",
+        "features": [
+          "Enhanced code reusability via Thymeleaf layout separation",
+          "Implemented access control using Spring Security",
+          "Conducted data testing with 1,800 Stored Procedure records"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 5,
+        "title": "Restaurant Review System",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "Building a CRUD-based review platform with data simulation.",
+        "features": [
+          "Enhanced code reusability via Thymeleaf layout separation",
+          "Implemented access control using Spring Security",
+          "Conducted data testing with 1,800 Stored Procedure records"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 6,
+        "title": "Restaurant Review System",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "Building a CRUD-based review platform with data simulation.",
+        "features": [
+          "Enhanced code reusability via Thymeleaf layout separation",
+          "Implemented access control using Spring Security",
+          "Conducted data testing with 1,800 Stored Procedure records"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 7,
+        "title": "Restaurant Review System",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "Building a CRUD-based review platform with data simulation.",
+        "features": [
+          "Enhanced code reusability via Thymeleaf layout separation",
+          "Implemented access control using Spring Security",
+          "Conducted data testing with 1,800 Stored Procedure records"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 8,
+        "title": "Restaurant Review System",
+        "tech": "Spring Boot / MySQL / Thymeleaf",
+        "period": "2023.09 - 2023.10",
+        "role": "Backend Lead",
+        "stack": ["Java", "Spring Boot", "MySQL", "Thymeleaf"],
+        "goal": "Building a CRUD-based review platform with data simulation.",
+        "features": [
+          "Enhanced code reusability via Thymeleaf layout separation",
+          "Implemented access control using Spring Security",
+          "Conducted data testing with 1,800 Stored Procedure records"
+        ],
+        "gifUrl": "/gifs/p1.gif",
+        "links": { "github": "#", "live": "#" }
+      },
+      {
+        "id": 9,
+        "title": "Car Renting & Management System",
+        "tech": "React / Spring Boot / MySQL",
+        "period": "2025.12 - 2026.03",
+        "role": "Full-stack Developer",
+        "stack": ["React", "Axios", "Spring Boot", "MyBatis", "MySQL", "Cloudtype"],
+        "goal": "Real-time rental platform with a data-driven admin dashboard.",
+        "features": [
+          "Implemented real-time vehicle search, multi-criteria filtering, and booking flows for users.",
+          "Developed an admin dashboard for inventory control, reservation tracking, and data visualization.",
+          "Optimized search performance by implementing MyBatis Dynamic SQL for complex queries.",
+          "Designed a robust API architecture using Axios Interceptors for global error handling.",
+          "Deployed the full-stack ecosystem using Cloudtype PaaS for stable live service operation."
+        ],
+        "gifUrl": "/gifs/p2.gif",
+        "links": {
+          "github": "https://github.com/jaykim1993/charang2026",
+          "live": "https://port-0-charang2026-mma8g0s58d0aa22f.sel3.cloudtype.app/"
+        }
+      }
+    ]
+  },
+  "contact": {
+    "header": {
+      "title": "CONTACTS",
+      "subtitle": "/ Root / Contacts"
+    },
+    "channel": {
+      "title": "CHANNEL",
+      "phone": "+82 10-6674-6038"
+    },
+    "social": {
+      "title": "SOCIAL"
+    },
+    "direct": {
+      "title": "DIRECT CONTACT",
+      "slogan": "\"I’m always open to new projects, creative ideas, or opportunities!\"",
+      "form": {
+        "name": "Name",
+        "email": "Email Address",
+        "message": "How can I help you?",
+        "submit": "Send Message"
+      }
+    },
+    "alert": {
+      "success": "Message sent successfully! I will get back to you soon.",
+      "fail": "Failed to send the message. Please try again later."
+    }
+  }
+}

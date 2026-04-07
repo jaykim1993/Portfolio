@@ -122,7 +122,101 @@
     width: 100%;
 }
 
-/* --- 기존 코드 하단에 추가 --- */
+/* 언어 선택기 컨테이너 */
+.lang_selector_container {
+    position: relative;
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+/* 메인 버튼 */
+.lang_btn {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 6px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #e7e7e7;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.lang_btn:hover {
+    background: rgba(0, 255, 64, 0.05);
+    /* 헤더 그린 포인트 활용 */
+    border-color: rgba(0, 255, 64, 0.4);
+}
+
+.lang_label {
+    color: #999;
+    /* 'Language' 글자는 살짝 흐리게 */
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.lang_divider {
+    color: rgba(255, 255, 255, 0.1);
+    font-weight: 200;
+}
+
+.current_name {
+    color: #61dafb;
+    /* 현재 언어는 로고 포인트 컬러인 하늘색 */
+    font-weight: 700;
+}
+
+.arrow {
+    font-size: 10px;
+    color: #666;
+}
+
+/* 드롭다운 메뉴 */
+.lang_dropdown {
+    position: absolute;
+    top: 120%;
+    right: 0;
+    background: rgba(7, 9, 12, 0.9);
+    /* 헤더 배경색과 통일 */
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 5px;
+    list-style: none;
+    min-width: 100px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    z-index: 10000;
+}
+
+.lang_item {
+    padding: 10px;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    color: #999;
+    font-size: 13px;
+    transition: all 0.2s;
+}
+
+.lang_item:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: #e7e7e7;
+}
+
+/* 활성화된 언어 스타일 */
+.lang_item.active {
+    background: rgba(0, 255, 64, 0.1);
+    /* 그린 글로우 테마 */
+    color: #00ff40;
+    font-weight: 700;
+}
 
 @media (max-width: 430px) {
 
@@ -156,6 +250,22 @@
         font-weight: 700;
     }
 
+    .lang_label,
+    .lang_divider,
+    .arrow {
+        display: none;
+    }
+
+    .lang_btn {
+        padding: 5px 8px;
+        background: transparent;
+        border: none;
+    }
+
+    .current_name {
+        font-size: 12px;
+    }
+
     /* 4. 아이폰 다이내믹 아일랜드 대응 */
     @supports (padding-top: env(safe-area-inset-top)) {
         .header {
@@ -183,5 +293,21 @@
         width: 100%;
         justify-content: space-around;
         /* 메뉴를 화면에 골고루 분산 */
+    }
+
+    .lang_label,
+    .lang_divider,
+    .arrow {
+        display: none;
+    }
+
+    .lang_btn {
+        padding: 5px 8px;
+        background: transparent;
+        border: none;
+    }
+
+    .current_name {
+        font-size: 12px;
     }
 }

@@ -216,7 +216,7 @@
         text-align: left;
     }
 
-    .info_item {
+    .info_item, .greeting_box{
         margin-bottom: 1.8rem;
         text-align: left;
     }

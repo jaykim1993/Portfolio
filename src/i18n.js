@@ -8,6 +8,7 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
+    lng: localStorage.getItem('language') || 'ko',
     fallbackLng: 'ko',
     debug: true,
     returnObjects: true,

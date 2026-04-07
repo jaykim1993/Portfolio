@@ -223,7 +223,10 @@
     /* 1. 헤더 전체 여백 조정 */
     .header {
         height: 3.5rem;
-        padding: 0 1rem;
+        /* 좌우 여백을 더 줄여서 중앙 공간 확보 */
+        padding: 0 0.8rem; 
+        /* 양 끝으로 밀어내기 재확인 */
+        justify-content: space-between;
     }
 
     /* 2. 왼쪽 로고: 이름 줄이기 (Jay Kim만 남기거나 폰트 축소) */
@@ -240,26 +243,58 @@
 
     /* 3. 오른쪽 메뉴: 간격과 폰트 최적화 */
     .h_right {
-        gap: 0.7rem;
-        /* 링크 사이 간격을 좁게 */
+        gap: 0.6rem; 
+        /* 오른쪽 메뉴 전체를 우측 끝으로 밀착 */
+        margin-left: auto; 
+        justify-content: flex-end;
     }
 
     .h_right_a {
         font-size: 0.75rem;
         /* 가독성을 해치지 않는 선에서 최소화 */
+        /* 글자 간격을 좁혀서 가로 폭 절약 */
+        letter-spacing: -0.02em;
         font-weight: 700;
+        left: 5rem;
     }
 
+    /* 1. 언어 선택기 컨테이너를 헤더 밖으로 탈출시킴 */
+    .lang_selector_container {
+        top: 4.2rem;
+        right: 1.2rem;
+    }
+
+    .lang_btn {
+        background: rgba(255, 255, 255, 0.07) !important;
+        backdrop-filter: blur(12px);
+        border: 1px solid rgba(255, 255, 255, 0.1) !important;
+        border-radius: 20px !important;
+        /* 완전한 알약 모양 */
+        padding: 6px 15px !important;
+        box-shadow: 0 0 15px rgba(0, 255, 65, 0.1);
+        /* 미세한 그린 광채 */
+        /* 내부 요소가 사라졌으니 간격도 0으로 만듭니다 */
+        gap: 0 !important;
+    }
+
+    /* 3. 드롭다운 위치 조정 (버튼 바로 아래) */
+    .lang_dropdown {
+        top: 110%;
+        right: 0;
+        background: rgba(7, 9, 12, 0.95);
+    }
+
+    /* 기존 숨김 처리 유지 */
     .lang_label,
     .lang_divider,
     .arrow {
         display: none;
     }
 
-    .lang_btn {
-        padding: 5px 8px;
-        background: transparent;
-        border: none;
+    .lang_label,
+    .lang_divider,
+    .arrow {
+        display: none;
     }
 
     .current_name {
@@ -295,19 +330,5 @@
         /* 메뉴를 화면에 골고루 분산 */
     }
 
-    .lang_label,
-    .lang_divider,
-    .arrow {
-        display: none;
-    }
 
-    .lang_btn {
-        padding: 5px 8px;
-        background: transparent;
-        border: none;
-    }
-
-    .current_name {
-        font-size: 12px;
-    }
 }

@@ -89,6 +89,7 @@ export default function Skills() {
                   {/* 무한 루프를 위한 복제 세트 (아이템이 4개 이상일 때만 작동) */}
                   {step.skills.length >= 4 && step.skills.map((skill, sIdx) => (
                     <div key={`clone-${sIdx}`} className="skill_item_haptic">
+                      <span className="skill_type_badge">{skill.type}</span>
                       <span className="haptic_icon_box">{skill.icon}</span>
                       <span className="haptic_name_text">{skill.name}</span>
                     </div>

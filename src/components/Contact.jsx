@@ -1,14 +1,17 @@
 import './Contact.css'
 import { useRef } from 'react';
-import { FaGithub, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaInstagram, FaPhoneAlt } from 'react-icons/fa';
+import { toast } from 'react-hot-toast';
 import emailjs from '@emailjs/browser';
 import './Footer.css'
 import { useTranslation } from 'react-i18next'; // 1. 임포트 추가
 
 export default function Contact() {
+  // JSON 번역문 호출
   const { t } = useTranslation(); // 2. 훅 선언
   const form = useRef();
 
+  // 이메일 폼 제출 API
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -27,6 +30,26 @@ export default function Contact() {
         alert(t('contact.alert.fail'));
       });
   };
+  // 클립보드 복사 함수
+  const handleCopy = (text, type) => {
+    navigator.clipboard.writeText(text).then(() => {
+      toast.success(`${type} 복사 완료!`, {
+        duration: 2000,
+        style: {
+          borderRadius: '4px',
+          background: '#1a1a1a', // 어두운 배경
+          color: '#00FF41',      // 네온 그린 텍스트
+          border: '1px solid #333',
+          fontSize: '0.8rem',
+          fontFamily: 'monospace',
+        },
+        iconTheme: {
+          primary: '#00FF41',
+          secondary: '#1a1a1a',
+        },
+      });
+    });
+  };
 
   return (
     <div className="section_inner">
@@ -39,14 +62,26 @@ export default function Contact() {
         <div className="contact_info">
           <div className="info_item">
             <h3 className="section_h3">{t('contact.channel.title')}</h3>
-            <div className="contct_group">
-              <div className="image_box">
-                <img src="icons8-letter.png" className="img_static" alt="email" />
-                <img src="icons8-letter.apng.png" className="img_gif" alt="email" />
+            <div className='contct_wrap'>
+              <div 
+              className="contct_email" 
+              onClick={() => handleCopy("jaykim6674@gmail.com", "Email")}
+              >
+                <div className="image_box">
+                  <img src="icons8-letter.png" className="img_static" alt="email" />
+                  <img src="icons8-letter.apng.png" className="img_gif" alt="email" />
+                </div>
+                <span className="contact_word">jaykim6674@gmail.com</span>
               </div>
-              <span className="contact_word">jaykim6674@gmail.com</span>
+
+              <div 
+              className="contact_phone"
+              onClick={() => handleCopy(t('contact.channel.phone'), "Phone")}
+              >
+                <FaPhoneAlt className="phone_icon" />
+                {t('contact.channel.phone')}
+              </div>
             </div>
-            <p className="contact_word">{t('contact.channel.phone')}</p>
           </div>
 
           <div className="info_item">
@@ -72,26 +107,26 @@ export default function Contact() {
 
             <form ref={form} onSubmit={sendEmail} className="contact_form">
               <div className="input_row">
-                <input 
-                  type="text" 
-                  name="user_name" 
-                  placeholder={t('contact.direct.form.name')} 
-                  required 
-                  className="input_name" 
+                <input
+                  type="text"
+                  name="user_name"
+                  placeholder={t('contact.direct.form.name')}
+                  required
+                  className="input_name"
                 />
-                <input 
-                  type="email" 
-                  name="user_email" 
-                  placeholder={t('contact.direct.form.email')} 
-                  required 
-                  className="input_email" 
+                <input
+                  type="email"
+                  name="user_email"
+                  placeholder={t('contact.direct.form.email')}
+                  required
+                  className="input_email"
                 />
               </div>
-              <textarea 
-                name="user_message" 
-                placeholder={t('contact.direct.form.message')} 
-                rows="12" 
-                required 
+              <textarea
+                name="user_message"
+                placeholder={t('contact.direct.form.message')}
+                rows="12"
+                required
               />
               <button type="submit" className="submit_btn">
                 {t('contact.direct.form.submit')}

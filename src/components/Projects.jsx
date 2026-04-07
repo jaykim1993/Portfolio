@@ -11,6 +11,25 @@ export default function Projects() {
   // 💡 JSON에서 프로젝트 배열 데이터를 통째로 가져옴
   const projectData = t('projects.data', { returnObjects: true });
 
+  // 헤더 핸들스크롤
+  const handleScroll = (e, id) => {
+    setSelectedProject(null);
+    e.preventDefault();
+    const target = document.getElementById(id);
+    if (target) {
+      // 모바일(window.innerWidth < 430)일 때는 헤더가 더 낮으므로 조건부 설정
+      const isMobile = window.innerWidth <= 430;
+      const headerHeight = isMobile ? 56 : 64; // 3.5rem vs 4rem
+      const extraMargin = isMobile ? 10 : 20;
+
+      const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+
+      window.scrollTo({
+        top: targetPosition - headerHeight - extraMargin,
+        behavior: 'smooth'
+      });
+    }
+  };
   // 상세 페이지 뷰
   if (selectedProject) {
     return (
@@ -57,7 +76,7 @@ export default function Projects() {
             <div className="terminal_top_bar">{t('projects.ui.terminal_log')}</div>
             <div className="terminal_body">
               <ul>
-                <li><p># {selectedProject.goal}</p></li>
+                <li><p># {selectedProject.goal}</p><br /></li>
                 {selectedProject.features.map((f, i) => (
                   <li key={i}><span className="prompt">$</span> {f}</li>
                 ))}
@@ -66,7 +85,7 @@ export default function Projects() {
           </div>
 
           <div className="detail_actions_row">
-            <button className="back_action_btn" onClick={() => setSelectedProject(null)}>
+            <button className="back_action_btn" onClick={(e) => handleScroll(e, 'projects') }>
               {t('projects.ui.back')}
             </button>
             <button className="play_gif_btn" onClick={() => setShowGif(true)}>
@@ -91,6 +110,8 @@ export default function Projects() {
       </div>
     );
   }
+
+
 
   // 리스트 뷰
   return (

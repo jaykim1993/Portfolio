@@ -159,7 +159,6 @@
 
 .terminal_body li p {
     font-size: 1.6rem;
-    line-height: 60px;
 }
 
 .project_one_liner {
@@ -194,9 +193,6 @@
     border-bottom: 1px solid #444;
     padding-bottom: 2px;
 }
-
-
-
 
 .play_gif_btn,
 .back_action_btn {

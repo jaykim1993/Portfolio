@@ -27,7 +27,7 @@ export default function IntroContainer({ children, onSkip }) {
   const [typedText, setTypedText] = useState("");
   const [isSkipped, setIsSkipped] = useState(false);
 
-  const fullText = `Portfolio JAY KIM ver1.0.0
+  const fullText = `Portfolio JAY KIM ver1.0.6
   Initialize Service: SUCCESS..
   Ready to Connect via Port 8080..`;
   const typingSpeed = 30;

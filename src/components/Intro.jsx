@@ -8,7 +8,7 @@ export default function Intro() {
     <div className="section_inner">
       <div className="section_header">
         <h1 className="section_title">{t('intro.header.title')}<span className="mobile_hide">DUCTION</span></h1>
-        <span className="section_subtitle">{t('intro.header.subtitle')}</span>
+        <span className="section_subtitle">{t('intro.header.subtitle')}<span className="mobile_hide">duction</span></span>
       </div>
 
       <div className="intro_main">

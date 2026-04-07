@@ -41,7 +41,7 @@ export default function Projects() {
         <div className="section_header">
           <h1 className="section_title">{selectedProject.title}</h1>
           <span className="section_subtitle">
-            / Root / Projects / {selectedProject.title}
+            / Root / Projects / {t('projects.header.subtitle', { lng: 'en' })}
           </span>
         </div>
 
@@ -89,7 +89,7 @@ export default function Projects() {
           </div>
 
           <div className="detail_actions_row">
-            <button className="back_action_btn" onClick={(e) => { setSelectedProject(null); handleScroll(e, 'projects') }}>
+            <button className="back_action_btn" onClick={(e) => { setSelectedId(null); handleScroll(e, 'projects') }}>
               {t('projects.ui.back')}
             </button>
             <button className="play_gif_btn" onClick={() => setShowGif(true)}>

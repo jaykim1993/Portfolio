@@ -22,6 +22,12 @@
     /* 하단 학력과 경력 사이 간격 */
 }
 
+.mobile_hide {
+    display: inline;
+    /* display: none; */
+    /* 핸드폰에서는 숨김 */
+}
+
 /* 2. 섹션 타이틀 및 헤더 */
 .section_h3 {
     font-size: 1rem;
@@ -131,6 +137,7 @@
     color: rgba(255, 255, 255, 0.15);
     text-transform: uppercase;
 }
+
 .profile_info {
     margin-top: 1.5rem;
     /* text-align: center; */
@@ -152,12 +159,14 @@
 .profile_role {
     font-size: 1rem;
     padding-left: 20px;
-    color: #00FF41; /* 매트릭스 그린 */
+    color: #00FF41;
+    /* 매트릭스 그린 */
     opacity: 0.8;
     margin-top: 0.5rem;
     letter-spacing: 0.1rem;
     text-transform: uppercase;
 }
+
 /* --- 모바일 대응 (갤럭시, 아이폰 공통) --- */
 @media screen and (max-width: 430px) {
 
@@ -189,13 +198,22 @@
         gap: 2.5rem;
         text-align: right;
     }
+
     .profile_name {
         font-size: 1.8rem;
         letter-spacing: 0.2rem;
     }
+
     .profile_role {
         font-size: 0.8rem;
     }
+
+    .mobile_hide {
+        /* display: inline; */
+        display: none;
+        /* 핸드폰에서는 숨김 */
+    }
+
     /* 슬로건 폰트 크기 최적화 (가독성) */
     .identity_highlight .main_slogan {
         font-size: 1.4rem;
@@ -220,7 +238,8 @@
         text-align: left;
     }
 
-    .info_item, .greeting_box{
+    .info_item,
+    .greeting_box {
         margin-bottom: 1.8rem;
         text-align: left;
     }

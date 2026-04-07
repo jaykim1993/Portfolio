@@ -109,7 +109,6 @@
 .contact_phone:hover .phone_icon{
     animation: ring-bell 0.8s ease-in-out;
 }
-
 /* 아이콘 공통 스타일 */
 .contact_icon {
     font-size: 1.4rem;

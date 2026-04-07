@@ -13,7 +13,6 @@ export default function Projects() {
 
   // 헤더 핸들스크롤
   const handleScroll = (e, id) => {
-    setSelectedProject(null);
     e.preventDefault();
     const target = document.getElementById(id);
     if (target) {
@@ -85,7 +84,7 @@ export default function Projects() {
           </div>
 
           <div className="detail_actions_row">
-            <button className="back_action_btn" onClick={(e) => handleScroll(e, 'projects') }>
+            <button className="back_action_btn" onClick={(e) => {setSelectedProject(null); handleScroll(e, 'projects') }}>
               {t('projects.ui.back')}
             </button>
             <button className="play_gif_btn" onClick={() => setShowGif(true)}>
@@ -123,7 +122,7 @@ export default function Projects() {
       <div className="projects_grid">
         {/* JSON에서 가져온 배열을 직접 map으로 순회 */}
         {Array.isArray(projectData) && projectData.map(p => (
-          <div key={p.id} className="project_card" onClick={() => setSelectedProject(p)}>
+          <div key={p.id} className="project_card" onClick={(e) => {setSelectedProject(p); handleScroll(e, 'projects') }}>
             <span className="project_id"># {p.id}</span>
             <h2 className="project_name">{p.title}</h2>
             <p className="project_tech">{p.tech}</p>

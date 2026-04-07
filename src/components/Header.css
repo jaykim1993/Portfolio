@@ -251,7 +251,7 @@
         /* 글자 간격을 좁혀서 가로 폭 절약 */
         letter-spacing: -0.02em;
         font-weight: 700;
-        left: 4rem;
+        left: 3.5rem;
     }
 
     /* 1. 언어 선택기 컨테이너를 헤더 밖으로 탈출시킴 */

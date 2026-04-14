@@ -171,74 +171,92 @@
       },
       {
         "id": 6,
-        "title": "Restaurant Review System",
-        "tech": "Spring Boot / MySQL / Thymeleaf",
-        "period": "2023.09 - 2023.10",
-        "role": "Backend Lead",
+        "title": "Car Renting Service",
+        "tech": "React / Spring Boot / MySQL",
+        "period": "2025.12 - 2026.03",
+        "role": "Full-stack Developer",
         "stack": [
-          "Java",
+          "React",
+          "Axios",
           "Spring Boot",
+          "MyBatis",
           "MySQL",
-          "Thymeleaf"
+          "Cloudtype"
         ],
-        "goal": "Building a CRUD-based review platform with data simulation.",
+        "goal": "Real-time rental platform with a data-driven admin dashboard.",
         "features": [
-          "Enhanced code reusability via Thymeleaf layout separation",
-          "Implemented access control using Spring Security",
-          "Conducted data testing with 1,800 Stored Procedure records"
+          "GUEST ID: test PW: 1234",
+          "ADMIN ID: admin PW: 1234",
+          "Implemented real-time vehicle search, multi-criteria filtering, and booking flows for users.",
+          "Developed an admin dashboard for inventory control, reservation tracking, and data visualization.",
+          "Optimized search performance by implementing MyBatis Dynamic SQL for complex queries.",
+          "Designed a robust API architecture using Axios Interceptors for global error handling.",
+          "Deployed the full-stack ecosystem using Cloudtype PaaS for stable live service operation."
         ],
-        "gifUrl": "/gifs/p1.gif",
+        "gifUrl": "/gifs/p2.gif",
         "links": {
-          "github": "#",
-          "live": "#"
+          "github": "https://github.com/jaykim1993/charang2026",
+          "live": "https://port-0-charang2026-mma8g0s58d0aa22f.sel3.cloudtype.app/"
         }
       },
       {
         "id": 7,
-        "title": "Restaurant Review System",
-        "tech": "Spring Boot / MySQL / Thymeleaf",
-        "period": "2023.09 - 2023.10",
-        "role": "Backend Lead",
+        "title": "Car Renting Service",
+        "tech": "React / Spring Boot / MySQL",
+        "period": "2025.12 - 2026.03",
+        "role": "Full-stack Developer",
         "stack": [
-          "Java",
+          "React",
+          "Axios",
           "Spring Boot",
+          "MyBatis",
           "MySQL",
-          "Thymeleaf"
+          "Cloudtype"
         ],
-        "goal": "Building a CRUD-based review platform with data simulation.",
+        "goal": "Real-time rental platform with a data-driven admin dashboard.",
         "features": [
-          "Enhanced code reusability via Thymeleaf layout separation",
-          "Implemented access control using Spring Security",
-          "Conducted data testing with 1,800 Stored Procedure records"
+          "GUEST ID: test PW: 1234",
+          "ADMIN ID: admin PW: 1234",
+          "Implemented real-time vehicle search, multi-criteria filtering, and booking flows for users.",
+          "Developed an admin dashboard for inventory control, reservation tracking, and data visualization.",
+          "Optimized search performance by implementing MyBatis Dynamic SQL for complex queries.",
+          "Designed a robust API architecture using Axios Interceptors for global error handling.",
+          "Deployed the full-stack ecosystem using Cloudtype PaaS for stable live service operation."
         ],
-        "gifUrl": "/gifs/p1.gif",
+        "gifUrl": "/gifs/p2.gif",
         "links": {
-          "github": "#",
-          "live": "#"
+          "github": "https://github.com/jaykim1993/charang2026",
+          "live": "https://port-0-charang2026-mma8g0s58d0aa22f.sel3.cloudtype.app/"
         }
       },
       {
         "id": 8,
-        "title": "Restaurant Review System",
-        "tech": "Spring Boot / MySQL / Thymeleaf",
-        "period": "2023.09 - 2023.10",
-        "role": "Backend Lead",
+        "title": "Car Renting Service",
+        "tech": "React / Spring Boot / MySQL",
+        "period": "2025.12 - 2026.03",
+        "role": "Full-stack Developer",
         "stack": [
-          "Java",
+          "React",
+          "Axios",
           "Spring Boot",
+          "MyBatis",
           "MySQL",
-          "Thymeleaf"
+          "Cloudtype"
         ],
-        "goal": "Building a CRUD-based review platform with data simulation.",
+        "goal": "Real-time rental platform with a data-driven admin dashboard.",
         "features": [
-          "Enhanced code reusability via Thymeleaf layout separation",
-          "Implemented access control using Spring Security",
-          "Conducted data testing with 1,800 Stored Procedure records"
+          "GUEST ID: test PW: 1234",
+          "ADMIN ID: admin PW: 1234",
+          "Implemented real-time vehicle search, multi-criteria filtering, and booking flows for users.",
+          "Developed an admin dashboard for inventory control, reservation tracking, and data visualization.",
+          "Optimized search performance by implementing MyBatis Dynamic SQL for complex queries.",
+          "Designed a robust API architecture using Axios Interceptors for global error handling.",
+          "Deployed the full-stack ecosystem using Cloudtype PaaS for stable live service operation."
         ],
-        "gifUrl": "/gifs/p1.gif",
+        "gifUrl": "/gifs/p2.gif",
         "links": {
-          "github": "#",
-          "live": "#"
+          "github": "https://github.com/jaykim1993/charang2026",
+          "live": "https://port-0-charang2026-mma8g0s58d0aa22f.sel3.cloudtype.app/"
         }
       },
       {

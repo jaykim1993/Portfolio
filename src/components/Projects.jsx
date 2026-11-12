@@ -70,14 +70,16 @@ export default function Projects() {
             <div className="meta_item">
               <span className="meta_label">{t('projects.ui.labels.links')}</span>
               <div className="meta_value links">
-                {selectedProject.links.live && (
+                {selectedProject.links.live && selectedProject.links.live !== '#' && (
                   <a href={selectedProject.links.live} target="_blank" rel="noreferrer" className="link_icon_btn">
                     <FaExternalLinkAlt className="contact_icon" /> LIVE
                   </a>
                 )}
-                <a href={selectedProject.links.github} target="_blank" rel="noreferrer" className="link_icon_btn">
-                  <FaGithub className="contact_icon" /> GITHUB
-                </a>
+                {selectedProject.links.github && selectedProject.links.github !== '#' && (
+                  <a href={selectedProject.links.github} target="_blank" rel="noreferrer" className="link_icon_btn">
+                    <FaGithub className="contact_icon" /> GITHUB
+                  </a>
+                )}
               </div>
             </div>
           </div>
@@ -98,9 +100,11 @@ export default function Projects() {
             <button className="back_action_btn" onClick={(e) => { setSelectedId(null); handleScroll(e, 'projects') }}>
               {t('projects.ui.back')}
             </button>
-            <button className="play_gif_btn" onClick={() => setShowGif(true)}>
-              {t('projects.ui.demo')}
-            </button>
+            {selectedProject.gifUrl && (
+              <button className="play_gif_btn" onClick={() => setShowGif(true)}>
+                {t('projects.ui.demo')}
+              </button>
+            )}
           </div>
         </div>
 

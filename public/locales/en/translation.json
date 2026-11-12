@@ -113,10 +113,10 @@
           "Designed a service-oriented relational model by distinguishing Master and Transactional tables",
           "Optimized complex SQL queries (JOIN, Subqueries) to improve data retrieval performance"
         ],
-        "gifUrl": "/gifs/p3.gif",
+        "gifUrl": "",
         "links": {
-          "github": "#",
-          "live": "#"
+          "github": "",
+          "live": ""
         }
       },
       {
@@ -138,10 +138,10 @@
           "Implemented automated logic for real-time rating averages using MySQL integration",
           "Enhanced data navigation efficiency by implementing server-side pagination with Thymeleaf"
         ],
-        "gifUrl": "/gifs/p4.gif",
+        "gifUrl": "",
         "links": {
-          "github": "#",
-          "live": "#"
+          "github": "https://github.com/jaykim1993/SpringBoot2026/tree/main/reviewboard_sj",
+          "live": ""
         }
       },
       {
@@ -163,10 +163,10 @@
           "Developed data aggregation logic using Groupby operations to analyze annual pollution trends",
           "Maximized data readability by generating multi-dimensional visualizations (Bar/Line charts)"
         ],
-        "gifUrl": "/gifs/p5.gif",
+        "gifUrl": "",
         "links": {
-          "github": "#",
-          "live": "#"
+          "github": "https://github.com/jaykim1993/Python2026/blob/main/jupyter/dustEx.ipynb",
+          "live": ""
         }
       },
       {
@@ -193,7 +193,7 @@
           "Designed a robust API architecture using Axios Interceptors for global error handling.",
           "Deployed the full-stack ecosystem using Cloudtype PaaS for stable live service operation."
         ],
-        "gifUrl": "/gifs/p2.gif",
+        "gifUrl": "/gifs/p6.gif",
         "links": {
           "github": "https://github.com/jaykim1993/charang2026",
           "live": "https://port-0-charang2026-mma8g0s58d0aa22f.sel3.cloudtype.app/"
@@ -211,7 +211,7 @@
           "Google Places API",
           "Leaflet"
         ],
-        "gifUrl": "",
+        "gifUrl": "/gifs/p7.gif",
         "links": {
           "github": "#",
           "live": ""
@@ -239,7 +239,7 @@
           "Firebase Hosting",
           "GitHub Actions"
         ],
-        "gifUrl": "",
+        "gifUrl": "/gifs/p8.gif",
         "links": {
           "github": "https://github.com/jaykim1993/cosmic-scale",
           "live": "https://cosmic-scale-radsci.web.app"
@@ -258,33 +258,32 @@
       },
       {
         "id": 9,
-        "title": "Car Renting Service",
-        "tech": "React / Spring Boot / MySQL",
-        "period": "2025.12 - 2026.03",
+        "period": "2026.11 - 2026.11",
         "role": "Full-stack Developer",
         "stack": [
-          "React",
-          "Axios",
-          "Spring Boot",
-          "MyBatis",
-          "MySQL",
-          "Cloudtype"
+          "JavaScript",
+          "Web Audio API",
+          "Canvas",
+          "Python",
+          "PyTorch",
+          "Demucs",
+          "torchcrepe"
         ],
-        "goal": "Real-time rental platform with a data-driven admin dashboard.",
-        "features": [
-          "GUEST ID: test PW: 1234",
-          "ADMIN ID: admin PW: 1234",
-          "Implemented real-time vehicle search, multi-criteria filtering, and booking flows for users.",
-          "Developed an admin dashboard for inventory control, reservation tracking, and data visualization.",
-          "Optimized search performance by implementing MyBatis Dynamic SQL for complex queries.",
-          "Designed a robust API architecture using Axios Interceptors for global error handling.",
-          "Deployed the full-stack ecosystem using Cloudtype PaaS for stable live service operation."
-        ],
-        "gifUrl": "/gifs/p2.gif",
+        "gifUrl": "/gifs/p9.gif",
         "links": {
-          "github": "https://github.com/jaykim1993/charang2026",
-          "live": "https://port-0-charang2026-mma8g0s58d0aa22f.sel3.cloudtype.app/"
-        }
+          "github": "",
+          "live": ""
+        },
+        "title": "Do-Re-Mi Challenge (Vocal Training Game)",
+        "tech": "JavaScript / Web Audio API / PyTorch",
+        "goal": "A TikTok 'Do-Re-Mi' filter-style game where your singing pitch steers a ball through pitch gates",
+        "features": [
+          "Tracked microphone pitch in real time with the YIN algorithm and rendered it on a canvas game",
+          "Judged PERFECT/GOOD/MISS by time spent within ±60 cents per note, with combo and S–D grading",
+          "Built Do-Re-Mi, random melody (3 levels) and melody-builder modes with on-screen/PC keyboard input and shareable challenge links",
+          "Python analyzer separates vocals with Demucs and extracts the melody with torchcrepe to turn any uploaded song into a challenge (GPU when available)",
+          "Added a ?sim virtual-singer mode to test the judging logic without a microphone"
+        ]
       }
     ]
   },

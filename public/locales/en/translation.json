@@ -230,33 +230,31 @@
       },
       {
         "id": 8,
-        "title": "Car Renting Service",
-        "tech": "React / Spring Boot / MySQL",
-        "period": "2025.12 - 2026.03",
-        "role": "Full-stack Developer",
+        "period": "2026.11 - 2026.11",
+        "role": "Frontend Developer",
         "stack": [
-          "React",
-          "Axios",
-          "Spring Boot",
-          "MyBatis",
-          "MySQL",
-          "Cloudtype"
+          "JavaScript",
+          "Three.js",
+          "WebGL",
+          "Firebase Hosting",
+          "GitHub Actions"
         ],
-        "goal": "Real-time rental platform with a data-driven admin dashboard.",
-        "features": [
-          "GUEST ID: test PW: 1234",
-          "ADMIN ID: admin PW: 1234",
-          "Implemented real-time vehicle search, multi-criteria filtering, and booking flows for users.",
-          "Developed an admin dashboard for inventory control, reservation tracking, and data visualization.",
-          "Optimized search performance by implementing MyBatis Dynamic SQL for complex queries.",
-          "Designed a robust API architecture using Axios Interceptors for global error handling.",
-          "Deployed the full-stack ecosystem using Cloudtype PaaS for stable live service operation."
-        ],
-        "gifUrl": "/gifs/p2.gif",
+        "gifUrl": "",
         "links": {
-          "github": "https://github.com/jaykim1993/charang2026",
-          "live": "https://port-0-charang2026-mma8g0s58d0aa22f.sel3.cloudtype.app/"
-        }
+          "github": "https://github.com/jaykim1993/cosmic-scale",
+          "live": "https://cosmic-scale-radsci.web.app"
+        },
+        "title": "Cosmic Scale (3D Universe Model)",
+        "tech": "Three.js / WebGL / Firebase Hosting",
+        "goal": "An interactive 3D map that explores from the solar system to the edge of the observable universe (~46.5 billion ly) in a single log-scaled space",
+        "features": [
+          "Compressed 1 AU to 46.5 billion light-years on a log₁₀ scale for seamless exploration in one view",
+          "Placed 75 objects in their real sky directions using J2000 RA/Dec and measured distances",
+          "Simulated Keplerian planet orbits, nearby-star proper motion and Voyager 1/2 positions with live, fast-forward and date-jump time controls",
+          "Measured true 3D distances between any two objects (ly, pc, AU, km, light-time)",
+          "Built a 16-step guided camera tour from Earth to the CMB and a moon-system view with 27 major moons",
+          "Shipped as a single build-free HTML file with GitHub Actions auto-deploying to Firebase Hosting"
+        ]
       },
       {
         "id": 9,

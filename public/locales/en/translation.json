@@ -201,33 +201,32 @@
       },
       {
         "id": 7,
-        "title": "Car Renting Service",
-        "tech": "React / Spring Boot / MySQL",
-        "period": "2025.12 - 2026.03",
+        "period": "2026.10 - 2026.11",
         "role": "Full-stack Developer",
         "stack": [
-          "React",
-          "Axios",
-          "Spring Boot",
-          "MyBatis",
-          "MySQL",
-          "Cloudtype"
+          "React Native",
+          "Expo",
+          "TypeScript",
+          "Node.js",
+          "Google Places API",
+          "Leaflet"
         ],
-        "goal": "Real-time rental platform with a data-driven admin dashboard.",
-        "features": [
-          "GUEST ID: test PW: 1234",
-          "ADMIN ID: admin PW: 1234",
-          "Implemented real-time vehicle search, multi-criteria filtering, and booking flows for users.",
-          "Developed an admin dashboard for inventory control, reservation tracking, and data visualization.",
-          "Optimized search performance by implementing MyBatis Dynamic SQL for complex queries.",
-          "Designed a robust API architecture using Axios Interceptors for global error handling.",
-          "Deployed the full-stack ecosystem using Cloudtype PaaS for stable live service operation."
-        ],
-        "gifUrl": "/gifs/p2.gif",
+        "gifUrl": "",
         "links": {
-          "github": "https://github.com/jaykim1993/charang2026",
-          "live": "https://port-0-charang2026-mma8g0s58d0aa22f.sel3.cloudtype.app/"
-        }
+          "github": "#",
+          "live": ""
+        },
+        "title": "Matjip Radar (Location-based Restaurant Finder)",
+        "tech": "Expo (React Native) / Node.js / Google Places API",
+        "goal": "A single-codebase web/iOS/Android app that scores nearby restaurants by rating, review count and distance",
+        "features": [
+          "Built web, iOS and Android from one codebase with Expo Router and react-native-web, branching only the map per platform",
+          "Designed a relative scoring model that corrects low-review ratings with a Bayesian average",
+          "Integrated Google Places Nearby/Text Search with radius search, keyword search and paginated load-more (up to 60 places)",
+          "Kept the API key server-side behind a proxy, including photo delivery, so it is never shipped in the client",
+          "Added category, price range and open-now filters, sorting, and a score-weighted random pick",
+          "Lazy-loaded and cached photos, hours and reviews on card expand to keep API costs low"
+        ]
       },
       {
         "id": 8,

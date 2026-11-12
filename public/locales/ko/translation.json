@@ -213,7 +213,7 @@
         ],
         "gifUrl": "/gifs/p7.gif",
         "links": {
-          "github": "#",
+          "github": "https://github.com/jaykim1993/matjip-radar",
           "live": ""
         },
         "title": "동네맛집 레이더 (위치 기반 맛집 추천)",
@@ -271,7 +271,7 @@
         ],
         "gifUrl": "/gifs/p9.gif",
         "links": {
-          "github": "",
+          "github": "https://github.com/jaykim1993/vocal-game",
           "live": ""
         },
         "title": "도레미 챌린지 (보컬 트레이닝 게임)",

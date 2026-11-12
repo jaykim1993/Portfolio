@@ -213,7 +213,7 @@
         ],
         "gifUrl": "/gifs/p7.gif",
         "links": {
-          "github": "#",
+          "github": "https://github.com/jaykim1993/matjip-radar",
           "live": ""
         },
         "title": "Matjip Radar (Location-based Restaurant Finder)",
@@ -271,7 +271,7 @@
         ],
         "gifUrl": "/gifs/p9.gif",
         "links": {
-          "github": "",
+          "github": "https://github.com/jaykim1993/vocal-game",
           "live": ""
         },
         "title": "Do-Re-Mi Challenge (Vocal Training Game)",
